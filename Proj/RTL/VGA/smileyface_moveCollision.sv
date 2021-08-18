@@ -11,10 +11,10 @@ module	smileyface_moveCollision	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input	logic	Y_direction,  //change the direction in Y to up  
-					input	logic	toggleX, 	//toggle the X direction 
+					input	logic	launch_Cable,  //change the direction in Y to up  
+					//input	logic	toggleX, 	//toggle the X direction 
 					input logic collision,  //collision if smiley hits an object
-					input	logic	[3:0] HitEdgeCode, //one bit per edge 
+					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
 					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside 
@@ -29,7 +29,9 @@ parameter int INITIAL_Y = 185;
 parameter int INITIAL_X_SPEED = 40;
 parameter int INITIAL_Y_SPEED = 20;
 parameter int MAX_Y_SPEED = 230;
-const int  Y_ACCEL = -1;
+parameter int X_SPEED = 20;
+parameter int Y_SPEED = 20;
+//const int  Y_ACCEL = -1;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -50,6 +52,9 @@ int Yspeed, topLeftY_FixedPoint;
 
 always_ff@(posedge clk or negedge resetN)
 begin
+	Yspeed <= Yspeed ; 
+	Xspeed <= Xspeed ; 
+	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
 		topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
@@ -59,35 +64,33 @@ begin
 			
 		//hit bit map has one bit per edge:  Left-Top-Right-Bottom	 
 
-	
-		if ((collision && HitEdgeCode [2] == 1 ))  // hit top border of brick  
-				if (Yspeed < 0) // while moving up
-						Yspeed <= -Yspeed ; 
-			
-			if ((collision && HitEdgeCode [0] == 1 ))// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
-				if (Yspeed > 0 )//  while moving down
-						Yspeed <= -Yspeed ; 
+		if((topLeftX == INITIAL_X) && (topLeftY == INITIAL_Y)) begin //Cable should stop upon reaching initial spot
+			Yspeed <= 0 ; 
+			Xspeed <= 0 ; 
+			if(launch_Cable)
+			begin
+				Yspeed <= Y_SPEED ; 
+				Xspeed <= X_SPEED ; 
+			end
+		end
+		
+		if ((collision)) begin //Collision should make the cable return
+			Yspeed <= -Yspeed ; 
+			Xspeed <= -Xspeed ; 
+		end
 
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
 		
 				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
-				
-				if (Yspeed < MAX_Y_SPEED ) //  limit the spped while going down 
-						Yspeed <= Yspeed  - Y_ACCEL ; // deAccelerate : slow the speed down every clock tick 
-		
-								
-				if (Y_direction) begin // button was pushed to go upwards 
-						if (Yspeed > 0 ) // while moving down
-								Yspeed <= -Yspeed  ;  // change speed to go up 
-				end ; 
-
+				topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; // position interpolation 
 
 		end
 	end
 end 
 
+/*
 //////////--------------------------------------------------------------------------------------------------------------=
 //  calculation of X Axis speed using and position calculate regarding X_direction key or colision
 
@@ -126,6 +129,7 @@ begin
 	end
 end
 
+*/
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;    
