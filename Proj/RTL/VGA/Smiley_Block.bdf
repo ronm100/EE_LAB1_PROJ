@@ -368,12 +368,12 @@ agreement for further details.
 	)
 	(parameter
 		"OBJECT_WIDTH_X"
-		"64"
+		"96"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"OBJECT_HEIGHT_Y"
-		"32"
+		"96"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -466,18 +466,18 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"X_SPEED"
-		"20"
+		"40"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"Y_SPEED"
-		"20"
+		"40"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 200 128))
 	)
-	(annotation_block (parameter)(rect 584 272 841 386))
+	(annotation_block (parameter)(rect 584 272 841 424))
 )
 (connector
 	(text "clk" (rect 880 392 894 409)(font "Intel Clear" ))

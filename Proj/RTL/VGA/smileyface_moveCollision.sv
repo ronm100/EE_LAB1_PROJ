@@ -24,14 +24,29 @@ module	smileyface_moveCollision	(
 
 // a module used to generate the  ball trajectory.  
 
-parameter int INITIAL_X = 280;
-parameter int INITIAL_Y = 185;
-parameter int INITIAL_X_SPEED = 40;
-parameter int INITIAL_Y_SPEED = 20;
-parameter int MAX_Y_SPEED = 230;
-parameter int X_SPEED = 20;
-parameter int Y_SPEED = 20;
+parameter int INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
+parameter int INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
+parameter int INITIAL_X_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
+parameter int INITIAL_Y_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
+parameter int MAX_Y_SPEED = 230; // TODO: DELETE
+parameter int X_SPEED = 20; // TODO: DELETE
+parameter int Y_SPEED = 20; // TODO: DELETE
+localparam int CIRCULAR = 0;
+localparam int STRAIGHT = 1;
+localparam int RIGHT = 0;
+localparam int LEFT = 1;
 //const int  Y_ACCEL = -1;
+logic movement_type; // 0 for circular movement, 1 for straight movement.
+logic circular_direction; // 0 for right, 1 for left.
+logic [0:3] [0:1] [6:0] initial_positions = {
+{7'd5, 7'd66},{7'd16, 7'd84},{7'd32, 7'd94},{7'd48, 7'd96},{7'd67, 7'd94},{7'd84, 7'd82},{7'd94, 7'd66}
+};
+logic [0:3] [0:1] [6:0] initial_speeds = {
+{-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
+};
+logic[3:0] frame_counter;
+logic [3:0] circular_ps;
+logic [3:0] circular_ns;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -55,27 +70,36 @@ begin
 	Yspeed <= Yspeed ; 
 	Xspeed <= Xspeed ; 
 	
+	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
-		topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
+		topLeftY_FixedPoint	<= (initial_positions[circular_ps][1] + INITIAL_Y) * FIXED_POINT_MULTIPLIER;
 		Xspeed	<= INITIAL_X_SPEED;
-		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
+		topLeftX_FixedPoint	<= (initial_positions[circular_ps][0] + INITIAL_X) * FIXED_POINT_MULTIPLIER;
+		movement_type <= CIRCULAR;
+		circular_direction <= RIGHT;
+		circular_ps <= 0;
+		circular_ns <= 1;
+		frame_counter <= 0;
+		
 	end 
 	else begin
 	// colision Calcultaion 
 			
 		//hit bit map has one bit per edge:  Left-Top-Right-Bottom	 
 
-		if((topLeftX == INITIAL_X) && (topLeftY == INITIAL_Y)) begin //Cable should stop upon reaching initial spot 
+		if((topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y))) begin //Cable should stop upon reaching initial spot 
 			if(Yspeed < 0)
 			begin
 				Yspeed <= 0 ; 
 				Xspeed <= 0 ;
+				movement_type <= CIRCULAR;
 			end
 			if(launch_Cable)
 			begin
-				Yspeed <= Y_SPEED ; 
-				Xspeed <= X_SPEED ; 
+				Yspeed <= initial_speeds[circular_ps][1] ; 
+				Xspeed <= initial_speeds[circular_ps][0] ; 
+				movement_type <= STRAIGHT;
 			end
 		end
 		
@@ -83,58 +107,51 @@ begin
 			Yspeed <= -Yspeed ; 
 			Xspeed <= -Xspeed ; 
 		end
+		
+		if(movement_type == CIRCULAR)
+		begin
+			if(circular_direction == RIGHT)
+			begin
+				if(circular_ps == 6)
+					begin
+						circular_ns <= 5;
+						circular_direction <= LEFT;
+					end
+					else circular_ns <= circular_ps + 1;
+			end
+			
+			if(circular_direction == LEFT)
+			begin
+				if(circular_ps == 0)
+					begin
+						circular_ns <= 1;
+						circular_direction <= RIGHT;
+					end
+					else circular_ns <= circular_ps - 1;
+			end
+		end
 
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-		
-				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
-				topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; // position interpolation 
-
+				frame_counter <= (frame_counter +1) % 6;
+				if( frame_counter == 0) circular_ps <= circular_ns;
+				
+				if(movement_type == STRAIGHT)
+				begin
+					topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
+					topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; // position interpolation 
+				end
+				
+				else if(movement_type == CIRCULAR)
+				begin
+					topLeftY_FixedPoint  <= initial_positions[circular_ns][1] + INITIAL_Y; // position interpolation 
+					topLeftX_FixedPoint  <= initial_positions[circular_ns][0] + INITIAL_X; // position interpolation 
+				end
 		end
 	end
 end 
 
-/*
-//////////--------------------------------------------------------------------------------------------------------------=
-//  calculation of X Axis speed using and position calculate regarding X_direction key or colision
-
-always_ff@(posedge clk or negedge resetN)
-begin
-	if(!resetN)
-	begin
-		Xspeed	<= INITIAL_X_SPEED;
-		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
-	end
-	else begin
-	
-				
-	//  an edge input is tested here as it is a very short instance   
-	if (toggleX)  
-	
-				Xspeed <= -Xspeed; 
-				
-	// collisions with the sides 			
-				if (collision && HitEdgeCode [3] == 1) begin  
-					if (Xspeed < 0 ) // while moving left
-							Xspeed <= -Xspeed ; // positive move right 
-				end
-			
-				if (collision && HitEdgeCode [1] == 1 ) begin  // hit right border of brick  
-					if (Xspeed > 0 ) //  while moving right
-							Xspeed <= -Xspeed  ;  // negative move left    
-				end	
-		   
-			
-		if (startOfFrame == 1'b1 )//&& Yspeed != 0) 
-	
-				        topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed;
-			
-					
-	end
-end
-
-*/
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;    
