@@ -58,15 +58,20 @@ begin
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
 		topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
+		Xspeed	<= INITIAL_X_SPEED;
+		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
 	end 
 	else begin
 	// colision Calcultaion 
 			
 		//hit bit map has one bit per edge:  Left-Top-Right-Bottom	 
 
-		if((topLeftX == INITIAL_X) && (topLeftY == INITIAL_Y)) begin //Cable should stop upon reaching initial spot
-			Yspeed <= 0 ; 
-			Xspeed <= 0 ; 
+		if((topLeftX == INITIAL_X) && (topLeftY == INITIAL_Y)) begin //Cable should stop upon reaching initial spot 
+			if(Yspeed < 0)
+			begin
+				Yspeed <= 0 ; 
+				Xspeed <= 0 ;
+			end
 			if(launch_Cable)
 			begin
 				Yspeed <= Y_SPEED ; 
