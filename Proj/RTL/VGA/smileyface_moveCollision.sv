@@ -8,7 +8,7 @@
 
 module	smileyface_moveCollision	(	
  
-					input	logic	clk,// check
+					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 					input	logic	launch_Cable,  //change the direction in Y to up  
@@ -44,11 +44,11 @@ logic [0:3] [0:1] [6:0] initial_positions = {
 logic [0:3] [0:1] [6:0] initial_speeds = {
 {-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
 };
-logic[3:0] frame_counter;
+logic[4:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
 
-const int	FIXED_POINT_MULTIPLIER	=	64;
+const int	FIXED_POINT_MULTIPLIER	=	1;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
 // we do all calculations with topLeftX_FixedPoint to get a resolution of 1/64 pixel in calcuatuions,
 // we devide at the end by FIXED_POINT_MULTIPLIER which must be 2^n, to return to the initial proportions
@@ -134,7 +134,7 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-				frame_counter <= (frame_counter +1) % 6;
+				frame_counter <= (frame_counter +1) % 20;
 				if( frame_counter == 0) circular_ps <= circular_ns;
 				
 				if(movement_type == STRAIGHT)
