@@ -8,7 +8,7 @@
 
 module	smileyface_moveCollision	(	
  
-					input	logic	clk,
+					input	logic	clk,// check
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 					input	logic	launch_Cable,  //change the direction in Y to up  
