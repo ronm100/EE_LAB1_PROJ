@@ -139,7 +139,7 @@ begin
 		
 		if (startOfFrame == 1'b1) begin 
 				frame_counter <= (frame_counter +1) % 48;
-				if( frame_counter == 0) circular_ps <= circular_ns;
+				if( frame_counter == 0 && movement_type == CIRCULAR) circular_ps <= circular_ns;
 				
 				if(movement_type == STRAIGHT)
 				begin
@@ -149,8 +149,8 @@ begin
 				
 				else if(movement_type == CIRCULAR)
 				begin
-					topLeftY_FixedPoint  <= initial_positions[circular_ns][1] + INITIAL_Y; // position interpolation 
-					topLeftX_FixedPoint  <= initial_positions[circular_ns][0] + INITIAL_X; // position interpolation 
+					topLeftY_FixedPoint  <= initial_positions[circular_ps][1] + INITIAL_Y; // position interpolation 
+					topLeftX_FixedPoint  <= initial_positions[circular_ps][0] + INITIAL_X; // position interpolation 
 				end
 		end
 	end

@@ -7,3 +7,5 @@ Proj/db/Lab1Demo.quiproj.11124.rdr.flock
 *.stp
 Proj\db\Lab1Demo.*
 *.stp
+*.rdr.flock
+Proj/output_files/*
