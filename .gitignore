@@ -1,3 +1,9 @@
 
 Proj/db/Lab1Demo.quiproj.22380.rdr.flock
 Proj/db/Lab1Demo.quiproj.11124.rdr.flock
+*.hdb
+*.hdb
+*.cdb
+*.stp
+Proj\db\Lab1Demo.*
+*.stp

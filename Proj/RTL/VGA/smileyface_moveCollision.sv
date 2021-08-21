@@ -35,6 +35,7 @@ localparam int CIRCULAR = 0;
 localparam int STRAIGHT = 1;
 localparam int RIGHT = 0;
 localparam int LEFT = 1;
+//localparam real SPEED_CONST = 1/8;
 //const int  Y_ACCEL = -1;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
@@ -44,9 +45,10 @@ logic [0:3] [0:1] [6:0] initial_positions = {
 logic [0:3] [0:1] [6:0] initial_speeds = {
 {-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
 };
-logic[4:0] frame_counter;
+logic[5:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
+logic isInStartingLocation;
 
 const int	FIXED_POINT_MULTIPLIER	=	1;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -64,6 +66,8 @@ int Yspeed, topLeftY_FixedPoint;
 
 //////////--------------------------------------------------------------------------------------------------------------=
 //  calculation 0f Y Axis speed using gravity or colision
+
+assign isInStartingLocation = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y));
 
 always_ff@(posedge clk or negedge resetN)
 begin
@@ -88,8 +92,8 @@ begin
 			
 		//hit bit map has one bit per edge:  Left-Top-Right-Bottom	 
 
-		if((topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y))) begin //Cable should stop upon reaching initial spot 
-			if(Yspeed < 0)
+		if(isInStartingLocation) begin //Cable should stop upon reaching initial spot 
+			if(Yspeed < 0) //Cable is in proccess of returning
 			begin
 				Yspeed <= 0 ; 
 				Xspeed <= 0 ;
@@ -97,8 +101,8 @@ begin
 			end
 			if(launch_Cable)
 			begin
-				Yspeed <= initial_speeds[circular_ps][1] ; 
-				Xspeed <= initial_speeds[circular_ps][0] ; 
+				Yspeed <= initial_speeds[circular_ps][1] / 8; 
+				Xspeed <= initial_speeds[circular_ps][0] / 8; 
 				movement_type <= STRAIGHT;
 			end
 		end
@@ -134,7 +138,7 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-				frame_counter <= (frame_counter +1) % 20;
+				frame_counter <= (frame_counter +1) % 48;
 				if( frame_counter == 0) circular_ps <= circular_ns;
 				
 				if(movement_type == STRAIGHT)
