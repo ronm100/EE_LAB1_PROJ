@@ -40,11 +40,16 @@ localparam int LEFT = 1;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
 logic [0:3] [0:1] [6:0] initial_positions = {
-{7'd5, 7'd66},{7'd16, 7'd84},{7'd32, 7'd94},{7'd48, 7'd96},{7'd67, 7'd94},{7'd84, 7'd82},{7'd94, 7'd66}
+{-7'd30, 7'd5},{-7'd20, 7'd5},{-7'd10, 7'd10},{7'd0, 7'd15},{7'd10, 7'd10},{7'd20, 7'd5},{7'd30, 7'd2}
 };
 logic [0:3] [0:1] [6:0] initial_speeds = {
-{-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
+{-7'd30, 7'd5},{-7'd20, 7'd5},{-7'd20, 7'd20},{7'd0, 7'd30},{7'd20, 7'd20},{7'd20, 7'd5},{7'd30, 7'd2}
 };
+
+/*
+{
+{-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
+};*/
 logic[5:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
