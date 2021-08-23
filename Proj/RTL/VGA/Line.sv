@@ -62,7 +62,8 @@ end
 always_ff@(posedge clk or negedge resetN)
 begin
 	
-	line_DR <= isAboveClamp && isOnLine;
+	//line_DR <= isAboveClamp && isOnLine;
+	line_DR <= 0;
 	
 end 
 

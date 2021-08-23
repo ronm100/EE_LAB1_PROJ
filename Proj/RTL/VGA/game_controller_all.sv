@@ -10,7 +10,6 @@ module	game_controller_all	(
 			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 			input	logic	drawing_request_Ball,
 			input	logic	drawing_request_1,
-			input	logic	drawing_request_num,
        // add the box here 
 			
 			output logic collision, // active in case of collision between two objects
@@ -22,8 +21,8 @@ module	game_controller_all	(
 // drawing_request_2      -->  number/box 
 logic collision_smiley_number;
 
-assign collision_smiley_number = ( drawing_request_Ball &&  drawing_request_num );
-assign collision = ( drawing_request_Ball && (drawing_request_1 || drawing_request_num) );// any collision 
+assign collision_smiley_number = ( drawing_request_Ball);
+assign collision = ( drawing_request_Ball && drawing_request_1);// any collision 
 						 						
 						
 // add colision between number and Smiley
