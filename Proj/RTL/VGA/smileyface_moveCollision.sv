@@ -17,15 +17,17 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY , // can be negative , if the object is partliy outside 
+					output	 logic signed	[10:0]	topLeftY , // can be negative , if the object is partliy outside
+				   output logic isInX, 
+					output logic XINIT_POS,	
 					output logic [3:0] circularState
 );
 
 
 // a module used to generate the  ball trajectory.  
 
-parameter int INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
-parameter int INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
+parameter logic signed [10:0] INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
+parameter logic signed [10:0] INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
 parameter int INITIAL_X_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
 parameter int INITIAL_Y_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
 parameter int MAX_Y_SPEED = 230; // TODO: DELETE
@@ -41,13 +43,10 @@ logic signed [6:0] [0:1] [10:0] initial_positions = {
 {-11'd30, 11'd2},{-11'd20, 11'd5},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd20, 11'd5},{11'd30, 11'd2}
 };
 logic signed [6:0] [0:1] [10:0] initial_speeds = {
-{-11'd30, 11'd2},{-11'd20, 11'd5},{-11'd20, 11'd20},{11'd0, 11'd30},{11'd20, 11'd20},{11'd20, 11'd5},{11'd30, 11'd2}
+{-11'd8, 11'd1},{-11'd10, 11'd2},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd10, 11'd2},{11'd15, 11'd1}
 };
 
-/*
-{
-{-11'd51, 11'd21},{-11'd40, 11'd40},{-11'd21, 11'd51},{11'd0, 11'd56},{11'd21, 11'd51},{11'd40, 11'd40},{11'd51, 11'd21}
-};*/
+
 logic[5:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
@@ -62,7 +61,7 @@ const int	y_FRAME_SIZE	=	479 * FIXED_POINT_MULTIPLIER;
 const int	bracketOffset =	30;
 const int   OBJECT_WIDTH_X = 64;
  
-int topLeftX_FixedPoint, topLeftY_FixedPoint;
+logic signed [10:0] topLeftX_FixedPoint, topLeftY_FixedPoint;
 logic signed [10:0] Xspeed, Yspeed ;
 logic signed [10:0] InitPosX ;
 assign InitPosX = initial_positions[circular_ps][0];
@@ -72,9 +71,9 @@ assign InitPosX = initial_positions[circular_ps][0];
 //  calculation 0f Y Axis speed using gravity or colision
 
 assign isInStartingLocation = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y));
-logic isInX, isInY;
+
 assign isInX = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X));
-assign isInY = (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y));
+assign XINIT_POS = initial_positions[circular_ps][0];
 
 always_ff@(posedge clk or negedge resetN)
 begin
@@ -108,8 +107,8 @@ begin
 			end
 			if(launch_Cable)
 			begin
-				Yspeed <= initial_speeds[circular_ps][1] >>> 1; 
-				Xspeed <= initial_speeds[circular_ps][0] >>> 1; 
+				Yspeed <= initial_speeds[circular_ps][1]; 
+				Xspeed <= initial_speeds[circular_ps][0]; 
 				movement_type <= STRAIGHT;
 			end
 		end

@@ -29,15 +29,13 @@ module	Line	(
 
 parameter int INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM    HAS TO BE THE SAME AS CLAMP'S
 parameter int INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM    HAS TO BE THE SAME AS CLAMP'S
-logic [0:3] [0:1] [6:0] initial_positions = {
-{7'd5, 7'd66},{7'd16, 7'd84},{7'd32, 7'd94},{7'd48, 7'd96},{7'd67, 7'd94},{7'd84, 7'd82},{7'd94, 7'd66}
-};
-logic [0:3] [0:1] [6:0] si = {
-{-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
+logic signed [6:0] [0:1] [10:0] initial_positions = {
+{-11'd30, 11'd2},{-11'd20, 11'd5},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd20, 11'd5},{11'd30, 11'd2}
 };
 logic[5:0] frame_counter;
 logic isAboveClamp;
 logic isOnLine;
+logic signed [10:0] clampSlope, pixelSlope; // sl
 
 const int	FIXED_POINT_MULTIPLIER	=	1;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -53,7 +51,13 @@ begin
 	if(pixelY < clamp_topLeftY) isAboveClamp = 1;
 	else isAboveClamp = 0;
 	
-	if( ((pixelY - INITIAL_Y) / (pixelX - INITIAL_X)) == ((pixelY - initial_positions[circular_ps][1]) / (pixelX - initial_positions[circular_ps][0])))
+	clampSlope = (pixelY - INITIAL_Y) / (pixelX - INITIAL_X);
+	if(((pixelY - initial_positions[circular_ps][1]) / (pixelX - initial_positions[circular_ps][0])) > 0) // pixelSlope = abs(pixelSlope);
+		pixelSlope = (pixelY - initial_positions[circular_ps][1]) / (pixelX - initial_positions[circular_ps][0]);
+	else
+		pixelSlope = -((pixelY - initial_positions[circular_ps][1]) / (pixelX - initial_positions[circular_ps][0]));
+	
+	if(clampSlope == pixelSlope)
 		isOnLine = 1;
 	else isOnLine = 0;
 
