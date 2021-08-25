@@ -9,3 +9,4 @@ Proj\db\Lab1Demo.*
 *.stp
 *.rdr.flock
 Proj/output_files/*
+*.hdb

@@ -15,9 +15,8 @@ module	objects_mux_new	(
 					input		logic	smileyDrawingRequest, // two set of inputs per unit
 					input		logic	[7:0] smileyRGB, 
 					     
-		  // add the box here 
-					input		logic	squareDrawingRequest, // two set of inputs per unit
-					input		logic	[7:0] squareRGB, 			  
+		  // line
+					input		logic	lineDR,			  
 			  
 		  ////////////////////////
 		  // background 
@@ -40,8 +39,8 @@ begin
 		 
 		 
 		 // add logic for box here 
-		else if (squareDrawingRequest == 1'b1 )   
-			RGBOut <= squareRGB;  //second priority 
+		else if (lineDR == 1'b1 )   
+			RGBOut <= 8'hCC0000;  //second priority 
 		 
 				else if (HartDrawingRequest == 1'b1)
 						RGBOut <= hartRGB;

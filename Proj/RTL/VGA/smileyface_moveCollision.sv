@@ -17,15 +17,17 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside 
-					
+					output	 logic signed	[10:0]	topLeftY , // can be negative , if the object is partliy outside
+				   output logic isInX, 
+					output logic XINIT_POS,	
+					output logic [3:0] circularState
 );
 
 
 // a module used to generate the  ball trajectory.  
 
-parameter int INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
-parameter int INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
+parameter logic signed [10:0] INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
+parameter logic signed [10:0] INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
 parameter int INITIAL_X_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
 parameter int INITIAL_Y_SPEED = 0; // TODO: MAKE THIS LOCAL PARAM
 parameter int MAX_Y_SPEED = 230; // TODO: DELETE
@@ -35,20 +37,20 @@ localparam int CIRCULAR = 0;
 localparam int STRAIGHT = 1;
 localparam int RIGHT = 0;
 localparam int LEFT = 1;
-//localparam real SPEED_CONST = 1/8;
-//const int  Y_ACCEL = -1;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
-logic [0:3] [0:1] [6:0] initial_positions = {
-{7'd5, 7'd66},{7'd16, 7'd84},{7'd32, 7'd94},{7'd48, 7'd96},{7'd67, 7'd94},{7'd84, 7'd82},{7'd94, 7'd66}
+logic signed [6:0] [0:1] [10:0] initial_positions = {
+{-11'd30, 11'd2},{-11'd20, 11'd5},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd20, 11'd5},{11'd30, 11'd2}
 };
-logic [0:3] [0:1] [6:0] initial_speeds = {
-{-7'd51, 7'd21},{-7'd40, 7'd40},{-7'd21, 7'd51},{7'd0, 7'd56},{7'd21, 7'd51},{7'd40, 7'd40},{7'd51, 7'd21}
+logic signed [6:0] [0:1] [10:0] initial_speeds = {
+{-11'd8, 11'd1},{-11'd10, 11'd2},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd10, 11'd2},{11'd15, 11'd1}
 };
+
+
 logic[5:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
-logic isInStartingLocation;
+logic signed [1:0] isInStartingLocation;
 
 const int	FIXED_POINT_MULTIPLIER	=	1;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -58,16 +60,20 @@ const int	x_FRAME_SIZE	=	639 * FIXED_POINT_MULTIPLIER; // note it must be 2^n
 const int	y_FRAME_SIZE	=	479 * FIXED_POINT_MULTIPLIER;
 const int	bracketOffset =	30;
 const int   OBJECT_WIDTH_X = 64;
-
-int Xspeed, topLeftX_FixedPoint; // local parameters 
-int Yspeed, topLeftY_FixedPoint;
-
+ 
+logic signed [10:0] topLeftX_FixedPoint, topLeftY_FixedPoint;
+logic signed [10:0] Xspeed, Yspeed ;
+logic signed [10:0] InitPosX ;
+assign InitPosX = initial_positions[circular_ps][0];
 
 
 //////////--------------------------------------------------------------------------------------------------------------=
 //  calculation 0f Y Axis speed using gravity or colision
 
 assign isInStartingLocation = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y));
+
+assign isInX = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X));
+assign XINIT_POS = initial_positions[circular_ps][0];
 
 always_ff@(posedge clk or negedge resetN)
 begin
@@ -77,9 +83,9 @@ begin
 	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
-		topLeftY_FixedPoint	<= (initial_positions[circular_ps][1] + INITIAL_Y) * FIXED_POINT_MULTIPLIER;
+		topLeftY_FixedPoint	<= (initial_positions[0][1] + INITIAL_Y) * FIXED_POINT_MULTIPLIER;
 		Xspeed	<= INITIAL_X_SPEED;
-		topLeftX_FixedPoint	<= (initial_positions[circular_ps][0] + INITIAL_X) * FIXED_POINT_MULTIPLIER;
+		topLeftX_FixedPoint	<= (initial_positions[0][0] + INITIAL_X) * FIXED_POINT_MULTIPLIER;
 		movement_type <= CIRCULAR;
 		circular_direction <= RIGHT;
 		circular_ps <= 0;
@@ -101,8 +107,8 @@ begin
 			end
 			if(launch_Cable)
 			begin
-				Yspeed <= initial_speeds[circular_ps][1] / 8; 
-				Xspeed <= initial_speeds[circular_ps][0] / 8; 
+				Yspeed <= initial_speeds[circular_ps][1]; 
+				Xspeed <= initial_speeds[circular_ps][0]; 
 				movement_type <= STRAIGHT;
 			end
 		end

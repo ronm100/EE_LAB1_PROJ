@@ -1,0 +1,92 @@
+Quartus Prime Archive log --	C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/INTEGRATION_ARCHIVE.qarlog
+
+Archive:	C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/INTEGRATION_ARCHIVE.qar
+Date:		Tue Aug 24 00:06:12 2021
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/DE10_Standard_Audio.sdc
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Lab1Demo.qpf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Lab1Demo.qsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Number_position.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Number_position.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Number_position.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Number_position_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/AUDIO.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/SinTable.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/TOP_AUDIO.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/ToneDecoder.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/addr_counter.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/AUDIO/prescaler.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/HexSS.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/KBDINTF.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/KEYBOARD_INTERFACE.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/bitrec.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/byterec.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/keyPad_decoder.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/keyToggle_decoder.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/lpf.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/random.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/simple_up_counter.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/Seg7/SEG7.SV
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/HART_DISPLAY.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/HartsMatrixBitMap.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/Line.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/NumbersBitMap.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/Smiley_Block.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/TOP_VGA_DEMO_KBD.bdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/VGA_Controller.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/back_ground_draw.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/back_ground_drawSquare.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/game_controller.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/game_controller_all.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/objects_mux.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/objects_mux_new.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyBitMap.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyBitMapX2.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/square_Hart_object.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/square_object.sv
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/valX.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/valX.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/valX.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/valX_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/valX_inst.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/audio_codec_controller/audio_codec_controller.qxp
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/numberPosition.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/numberPosition.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/numberPosition.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/numberPosition_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_loca.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_loca.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_loca.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_loca_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_location.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_location.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_location.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/X_location_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Y_location.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Y_location.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Y_location.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/Y_location_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/assignment_defaults.qdf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/audio_codec_controller.qxp
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider.cmp
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider.sip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider.spd
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider/clock_divider_0002.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider/clock_divider_0002.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/clock_divider_sim/clock_divider.vo
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/constraints/DE10_Standard_Audio.sdc
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/constraints/pin.tcl
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/matrix_top_XY.bsf
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/matrix_top_XY.qip
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/matrix_top_XY.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/matrix_top_XY_bb.v
+C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/output_files/Chain1.cdf
+	======= Total: 81 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
