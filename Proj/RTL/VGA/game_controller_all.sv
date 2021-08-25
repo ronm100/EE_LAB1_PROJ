@@ -10,7 +10,7 @@ module	game_controller_all	(
 			input	logic	startOfFrame,  // short pulse every start of frame 3	Hz 
 			input	logic	drawing_request_Ball,
 			input	logic	drawing_request_1,
-			input	logic	[0:9] drawing_request_vaccine,
+			input	logic	[9:0] drawing_request_vaccine,
        // add the box here 
 			
 			output logic [0:3] collision_clamp_vaccine, // number of the possition of the collision
@@ -26,20 +26,20 @@ module	game_controller_all	(
 always_comb
 begin
 	if ( drawing_request_Ball &&  drawing_request_vaccine[0] ) collision_clamp_vaccine = 0;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[1] ) collision_clamp_vaccine = 1;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[2] ) collision_clamp_vaccine = 2;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[3] ) collision_clamp_vaccine = 3;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[4] ) collision_clamp_vaccine = 4;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[5] ) collision_clamp_vaccine = 5;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[6] ) collision_clamp_vaccine = 6;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[7] ) collision_clamp_vaccine = 7;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[8] ) collision_clamp_vaccine = 8;
-	if ( drawing_request_Ball &&  drawing_request_vaccine[9] ) collision_clamp_vaccine = 9;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[1] ) collision_clamp_vaccine = 1;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[2] ) collision_clamp_vaccine = 2;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[3] ) collision_clamp_vaccine = 3;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[4] ) collision_clamp_vaccine = 4;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[5] ) collision_clamp_vaccine = 5;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[6] ) collision_clamp_vaccine = 6;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[7] ) collision_clamp_vaccine = 7;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[8] ) collision_clamp_vaccine = 8;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[9] ) collision_clamp_vaccine = 9;
 	else collision_clamp_vaccine = 15; //should not get here- error code
 end
 
 //assign collision_clamp_vaccine = ( drawing_request_Ball &&  drawing_request_vaccine );
-assign collision = ( drawing_request_Ball && (drawing_request_1 || drawing_request_vaccine) );// any collision 
+assign collision = ( drawing_request_Ball && (drawing_request_1 || (drawing_request_vaccine > 0)) );// any collision 
 						 						
 						
 // add colision between number and Smiley

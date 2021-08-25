@@ -17,8 +17,8 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside 
-					
+					output	 logic signed	[10:0]	topLeftY,  // can be negative , if the object is partliy outside 
+					output	 logic check_clk // TODO: delete, temporary
 );
 
 
@@ -61,6 +61,7 @@ const int   OBJECT_WIDTH_X = 64;
 
 int Xspeed, topLeftX_FixedPoint; // local parameters 
 int Yspeed, topLeftY_FixedPoint;
+assign check_clk = clk;
 
 
 

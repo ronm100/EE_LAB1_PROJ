@@ -73,24 +73,31 @@ agreement for further details.
 		(text "topLeftY[10..0]" (rect 136 43 195 55)(font "Arial" ))
 		(line (pt 216 48)(pt 200 48)(line_width 3))
 	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "check_clk" (rect 0 0 40 12)(font "Arial" ))
+		(text "check_clk" (rect 155 59 195 71)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 1))
+	)
 	(parameter
 		"INITIAL_X"
-		"280"
+		"288"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"INITIAL_Y"
-		"185"
+		"64"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"INITIAL_X_SPEED"
-		"40"
+		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"INITIAL_Y_SPEED"
-		"20"
+		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
