@@ -17,10 +17,8 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY , // can be negative , if the object is partliy outside
-				   output logic isInX, 
-					output logic XINIT_POS,	
-					output logic [3:0] circularState
+					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside
+					//output logic [3:0] circularState
 );
 
 

@@ -16,7 +16,7 @@ module	objects_mux_new	(
 					input		logic	[7:0] smileyRGB, 
 					     
 		  // line
-					input		logic	lineDR,			  
+				//	input		logic	lineDR,			  
 		  // add the box here 
 					input		logic [9:0]	vaccineDrawingRequest, // two set of inputs per unit
 					input		logic	[9:0][7:0] vaccineRGB, 			  

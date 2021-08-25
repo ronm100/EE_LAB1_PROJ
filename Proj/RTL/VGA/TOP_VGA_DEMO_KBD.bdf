@@ -1015,7 +1015,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"initial_y"
-		"32"
+		"64"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -1240,17 +1240,6 @@ agreement for further details.
 	(text "collision" (rect 482 280 520 297)(font "Intel Clear" ))
 	(pt 472 296)
 	(pt 576 296)
-)
-(connector
-	(text "smileyDR" (rect 810 168 856 185)(font "Intel Clear" ))
-	(pt 808 184)
-	(pt 888 184)
-)
-(connector
-	(text "smileyRGB[7..0]" (rect 810 184 886 201)(font "Intel Clear" ))
-	(pt 808 200)
-	(pt 944 200)
-	(bus)
 )
 (connector
 	(text "hart_select" (rect -302 760 -249 777)(font "Intel Clear" ))
@@ -1520,6 +1509,17 @@ agreement for further details.
 	(text "clk" (rect -462 1424 -448 1441)(font "Intel Clear" ))
 	(pt -464 1440)
 	(pt -400 1440)
+)
+(connector
+	(text "smileyDR" (rect 810 168 856 185)(font "Intel Clear" ))
+	(pt 808 184)
+	(pt 888 184)
+)
+(connector
+	(text "smileyRGB[7..0]" (rect 810 184 886 201)(font "Intel Clear" ))
+	(pt 808 200)
+	(pt 944 200)
+	(bus)
 )
 (junction (pt 552 944))
 (junction (pt 368 280))
