@@ -49,6 +49,7 @@ logic[5:0] frame_counter;
 logic [3:0] circular_ps;
 logic [3:0] circular_ns;
 logic isInStartingLocation;
+logic collisionFlag;// 1 if collision happend, 0 else
 
 const int	FIXED_POINT_MULTIPLIER	=	1;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -86,6 +87,7 @@ begin
 		circular_ps <= 0;
 		circular_ns <= 1;
 		frame_counter <= 0;
+		collisionFlag <= 0;
 		
 	end 
 	else begin
@@ -99,6 +101,7 @@ begin
 				Yspeed <= 0 ; 
 				Xspeed <= 0 ;
 				movement_type <= CIRCULAR;
+				collisionFlag <= 0;
 			end
 			if(launch_Cable)
 			begin
@@ -108,9 +111,10 @@ begin
 			end
 		end
 		
-		if ((collision)) begin //Collision should make the cable return
+		if ((collision && (!collisionFlag))) begin //Collision should make the cable return
 			Yspeed <= -Yspeed ; 
 			Xspeed <= -Xspeed ; 
+			collisionFlag <= 1;
 		end
 		
 		if(movement_type == CIRCULAR)

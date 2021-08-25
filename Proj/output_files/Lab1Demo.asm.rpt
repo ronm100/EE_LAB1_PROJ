@@ -1,5 +1,5 @@
 Assembler report for Lab1Demo
-Wed Aug 25 00:16:13 2021
+Wed Aug 25 17:36:46 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Aug 25 00:16:13 2021 ;
+; Assembler Status      ; Successful - Wed Aug 25 17:36:46 2021 ;
 ; Revision Name         ; Lab1Demo                              ;
 ; Top-level Entity Name ; TOP_VGA_DEMO_KBD                      ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ agreement for further details.
 +----------------+------------------------------------------------------------------------+
 ; Option         ; Setting                                                                ;
 +----------------+------------------------------------------------------------------------+
-; JTAG usercode  ; 0x01CB183B                                                             ;
-; Checksum       ; 0x01CB183B                                                             ;
+; JTAG usercode  ; 0x01CA6EA2                                                             ;
+; Checksum       ; 0x01CA6EA2                                                             ;
 +----------------+------------------------------------------------------------------------+
 
 
@@ -89,12 +89,12 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Aug 25 00:15:57 2021
+    Info: Processing started: Wed Aug 25 17:36:30 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Wed Aug 25 00:16:13 2021
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Wed Aug 25 17:36:46 2021
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:15
 

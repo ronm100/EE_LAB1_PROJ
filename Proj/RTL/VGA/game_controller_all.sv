@@ -39,7 +39,7 @@ begin
 end
 
 //assign collision_clamp_vaccine = ( drawing_request_Ball &&  drawing_request_vaccine );
-assign collision = ( drawing_request_Ball && (drawing_request_1 || (drawing_request_vaccine > 0)) );// any collision 
+assign collision = (( drawing_request_Ball && drawing_request_1) || (collision_clamp_vaccine != 15) );// any collision 
 						 						
 						
 // add colision between number and Smiley
@@ -65,7 +65,7 @@ begin
 
 if ( collision  && (flag == 1'b0)) begin 
 			flag	<= 1'b1; // to enter only once 
-			if(drawing_request_Ball &&  drawing_request_vaccine ) SingleHitPulse <= 1'b1 ; 
+			if(collision_clamp_vaccine != 15) SingleHitPulse <= 1'b1 ; 
 			//SingleHitPulse <= 1'b1 ; 
 		end ; 
 	end 
