@@ -1,17 +1,19 @@
 
-// game controller dudy Febriary 2020
-// (c) Technion IIT, Department of Electrical Engineering 2021 
-//updated --Eyal Lev 2021
+// game controller dudy Febriary 2	2	
+// (c) Technion IIT, Department of Electrical Engineering 2	21 
+//updated --Eyal Lev 2	21
 
 
 module	game_controller_all	(	
 			input	logic	clk,
 			input	logic	resetN,
-			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
+			input	logic	startOfFrame,  // short pulse every start of frame 3	Hz 
 			input	logic	drawing_request_Ball,
 			input	logic	drawing_request_1,
+			input	logic	[9:0] drawing_request_vaccine,
        // add the box here 
 			
+			output logic [0:3] collision_clamp_vaccine, // number of the possition of the collision
 			output logic collision, // active in case of collision between two objects
 			output logic SingleHitPulse // critical code, generating A single pulse in a frame 
 );
@@ -19,10 +21,25 @@ module	game_controller_all	(
 // drawing_request_Ball   -->  smiley
 // drawing_request_1      -->  brackets
 // drawing_request_2      -->  number/box 
-logic collision_smiley_number;
+//logic collision_smiley_number;
 
-assign collision_smiley_number = ( drawing_request_Ball);
-assign collision = ( drawing_request_Ball && drawing_request_1);// any collision 
+always_comb
+begin
+	if ( drawing_request_Ball &&  drawing_request_vaccine[0] ) collision_clamp_vaccine = 0;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[1] ) collision_clamp_vaccine = 1;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[2] ) collision_clamp_vaccine = 2;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[3] ) collision_clamp_vaccine = 3;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[4] ) collision_clamp_vaccine = 4;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[5] ) collision_clamp_vaccine = 5;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[6] ) collision_clamp_vaccine = 6;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[7] ) collision_clamp_vaccine = 7;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[8] ) collision_clamp_vaccine = 8;
+	else if ( drawing_request_Ball &&  drawing_request_vaccine[9] ) collision_clamp_vaccine = 9;
+	else collision_clamp_vaccine = 15; //should not get here- error code
+end
+
+//assign collision_clamp_vaccine = ( drawing_request_Ball &&  drawing_request_vaccine );
+assign collision = (( drawing_request_Ball && drawing_request_1) || (collision_clamp_vaccine != 15) );// any collision 
 						 						
 						
 // add colision between number and Smiley
@@ -48,7 +65,7 @@ begin
 
 if ( collision  && (flag == 1'b0)) begin 
 			flag	<= 1'b1; // to enter only once 
-			if( collision_smiley_number) SingleHitPulse <= 1'b1 ; 
+			if(collision_clamp_vaccine != 15) SingleHitPulse <= 1'b1 ; 
 			//SingleHitPulse <= 1'b1 ; 
 		end ; 
 	end 
