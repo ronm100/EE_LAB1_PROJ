@@ -17,8 +17,9 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside
+					output	 logic signed	[10:0]	topLeftY, // can be negative , if the object is partliy outside
 					//output logic [3:0] circularState
+					output	 logic IsInCircular
 );
 
 
@@ -166,7 +167,8 @@ end
 
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;    
+assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;
+assign	IsInCircular =  isInStartingLocation;
 
 
 endmodule
