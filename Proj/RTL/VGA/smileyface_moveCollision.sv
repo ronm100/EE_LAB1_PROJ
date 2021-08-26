@@ -35,7 +35,8 @@ localparam int CIRCULAR = 0;
 localparam int STRAIGHT = 1;
 localparam int RIGHT = 0;
 localparam int LEFT = 1;
-localparam int MAX_STATE = 159;
+//localparam int MAX_STATE = 159;
+localparam int MAX_STATE = 51;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
 /*
@@ -45,7 +46,7 @@ logic signed [6:0] [0:1] [10:0] initial_positions = {
 logic signed [6:0] [0:1] [10:0] initial_speeds = {
 {-11'd8, 11'd1},{-11'd10, 11'd2},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd10, 11'd2},{11'd15, 11'd1}
 };
-*/
+
 logic signed [MAX_STATE:0] [10:0] initial_positionsX = {
 11'd32, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd30, 11'd30, 11'd30, 11'd30, 11'd30, 11'd29, 11'd29, 11'd29, 11'd29, 11'd29, 11'd28, 11'd28, 11'd28, 11'd27, 11'd27, 11'd27, 11'd27, 11'd26, 11'd26, 11'd26, 11'd25, 11'd25, 11'd25, 11'd24, 11'd24, 11'd23, 11'd23, 11'd23, 11'd22, 11'd22, 11'd21, 11'd21, 11'd21, 11'd20, 11'd20, 11'd19, 11'd19, 11'd18, 11'd18, 11'd17, 11'd17, 11'd16, 11'd16, 11'd16, 11'd15, 11'd15, 11'd14, 11'd14, 11'd13, 11'd13, 11'd12, 11'd11, 11'd11, 11'd10, 11'd10, 11'd9, 11'd9, 11'd8, 11'd8, 11'd7, 11'd7, 11'd6, 11'd6, 11'd5, 11'd4, 11'd4, 11'd3, 11'd3, 11'd2, 11'd2, 11'd1, 11'd1, 11'd0, -11'd1, -11'd1, -11'd2, -11'd2, -11'd3, -11'd3, -11'd4, -11'd4, -11'd5, -11'd6, -11'd6, -11'd7, -11'd7, -11'd8, -11'd8, -11'd9, -11'd9, -11'd10, -11'd10, -11'd11, -11'd11, -11'd12, -11'd12, -11'd13, -11'd13, -11'd14, -11'd14, -11'd15, -11'd15, -11'd16, -11'd16, -11'd17, -11'd17, -11'd18, -11'd18, -11'd19, -11'd19, -11'd20, -11'd20, -11'd21, -11'd21, -11'd21, -11'd22, -11'd22, -11'd23, -11'd23, -11'd23, -11'd24, -11'd24, -11'd24, -11'd25, -11'd25, -11'd26, -11'd26, -11'd26, -11'd27, -11'd27, -11'd27, -11'd27, -11'd28, -11'd28, -11'd28, -11'd28, -11'd29, -11'd29, -11'd29, -11'd29, -11'd30, -11'd30, -11'd30, -11'd30, -11'd30, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd32
 };
@@ -58,7 +59,19 @@ logic signed [MAX_STATE:0] [10:0] initial_speedsY = {
 logic signed [MAX_STATE:0] [10:0] initial_speedsX = {
 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd2, 11'd2, 11'd2, 11'd2, 11'd2, 11'd2, 11'd1, 11'd1, 11'd1, 11'd1, 11'd1, 11'd1, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, -11'd1, -11'd1, -11'd1, -11'd1, -11'd1, -11'd1, -11'd2, -11'd2, -11'd2, -11'd2, -11'd2, -11'd2, -11'd3, -11'd3, -11'd3, -11'd3, -11'd3, -11'd3, -11'd4, -11'd4, -11'd4, -11'd4, -11'd4, -11'd4, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10
 };
-
+*/
+logic signed [MAX_STATE:0] [10:0] initial_positionsX = {
+11'd32, 11'd31, 11'd31, 11'd30, 11'd30, 11'd29, 11'd28, 11'd27, 11'd26, 11'd25, 11'd24, 11'd23, 11'd21, 11'd20, 11'd18, 11'd17, 11'd15, 11'd14, 11'd12, 11'd11, 11'd9, 11'd7, 11'd5, 11'd4, 11'd2, 11'd0, -11'd2, -11'd4, -11'd5, -11'd7, -11'd9, -11'd10, -11'd12, -11'd14, -11'd15, -11'd17, -11'd18, -11'd20, -11'd21, -11'd23, -11'd24, -11'd25, -11'd26, -11'd27, -11'd28, -11'd29, -11'd29, -11'd30, -11'd31, -11'd31, -11'd32
+};
+logic signed [MAX_STATE:0] [10:0] initial_positionsY = {
+11'd6, 11'd7, 11'd9, 11'd11, 11'd12, 11'd14, 11'd16, 11'd17, 11'd19, 11'd20, 11'd21, 11'd23, 11'd24, 11'd25, 11'd26, 11'd27, 11'd28, 11'd29, 11'd30, 11'd30, 11'd31, 11'd31, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd31, 11'd31, 11'd30, 11'd30, 11'd29, 11'd28, 11'd27, 11'd26, 11'd25, 11'd24, 11'd23, 11'd21, 11'd20, 11'd19, 11'd17, 11'd16, 11'd14, 11'd12, 11'd11, 11'd9, 11'd7, 11'd6
+};
+logic signed [MAX_STATE:0] [10:0] initial_speedsY = {
+11'd2, 11'd2, 11'd3, 11'd3, 11'd4, 11'd4, 11'd5, 11'd5, 11'd6, 11'd6, 11'd7, 11'd7, 11'd7, 11'd8, 11'd8, 11'd8, 11'd9, 11'd9, 11'd9, 11'd9, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd9, 11'd9, 11'd9, 11'd9, 11'd8, 11'd8, 11'd8, 11'd7, 11'd7, 11'd7, 11'd6, 11'd6, 11'd5, 11'd5, 11'd4, 11'd4, 11'd3, 11'd3, 11'd2, 11'd2
+};
+logic signed [MAX_STATE:0] [10:0] initial_speedsX = {
+11'd10, 11'd10, 11'd10, 11'd9, 11'd9, 11'd9, 11'd9, 11'd8, 11'd8, 11'd8, 11'd7, 11'd7, 11'd7, 11'd6, 11'd6, 11'd5, 11'd5, 11'd4, 11'd4, 11'd3, 11'd3, 11'd2, 11'd2, 11'd1, 11'd1, 11'd0, -11'd1, -11'd1, -11'd2, -11'd2, -11'd3, -11'd3, -11'd4, -11'd4, -11'd5, -11'd5, -11'd6, -11'd6, -11'd7, -11'd7, -11'd7, -11'd8, -11'd8, -11'd8, -11'd9, -11'd9, -11'd9, -11'd9, -11'd10, -11'd10, -11'd10
+};
 
 
 
@@ -78,14 +91,26 @@ const int	bracketOffset =	30;
 const int   OBJECT_WIDTH_X = 64;
  
 logic signed [10:0] topLeftX_FixedPoint, topLeftY_FixedPoint;
-logic signed [10:0] Xspeed, Yspeed ;
+logic signed [10:0] Xspeed, Yspeed, TLX,TLY ;
 
 
 
 //////////--------------------------------------------------------------------------------------------------------------=
 //  calculation 0f Y Axis speed using gravity or colision
 
-assign isInStartingLocation = (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
+always_comb
+begin
+	isInStartingLocation = (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
+	//get a better (64 times) resolution using integer   
+	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
+	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;  
+	TLX = initial_positionsX[circular_ps] + INITIAL_X;
+TLY = (initial_positionsY[circular_ps] + INITIAL_Y);
+end
+
+
+
+
 
 always_ff@(posedge clk or negedge resetN)
 begin
@@ -126,7 +151,15 @@ begin
 				movement_type <= STRAIGHT;
 			end
 		end
-		
+		/*
+		if(launch_Cable && movement_type == CIRCULAR)
+		begin
+			Yspeed <= initial_speedsY[circular_ps]; 
+			Xspeed <= initial_speedsX[circular_ps]; 
+			movement_type <= STRAIGHT;
+		end
+		*/
+			
 		if ((collision && (!collisionFlag))) begin //Collision should make the cable return
 			Yspeed <= -Yspeed ; 
 			Xspeed <= -Xspeed ; 
@@ -159,8 +192,8 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-				//frame_counter <= (frame_counter +1) % 48;
-				frame_counter = 0;
+				frame_counter <= (frame_counter +1) % 5;
+				//frame_counter = 0;
 				if( frame_counter == 0 && movement_type == CIRCULAR) circular_ps <= circular_ns;
 				
 				if(movement_type == STRAIGHT)
@@ -175,12 +208,14 @@ begin
 					topLeftX_FixedPoint  <= initial_positionsX[circular_ps] + INITIAL_X; // position interpolation 
 				end
 		end
+		
+		/////// debug /////
+		//if(TLX + TLY == -200) frame_counter = 1;
+		
 	end
 end 
 
-//get a better (64 times) resolution using integer   
-assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;    
+  
 
 
 endmodule
