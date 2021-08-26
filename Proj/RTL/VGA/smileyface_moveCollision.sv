@@ -35,19 +35,36 @@ localparam int CIRCULAR = 0;
 localparam int STRAIGHT = 1;
 localparam int RIGHT = 0;
 localparam int LEFT = 1;
+localparam int MAX_STATE = 159;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
+/*
 logic signed [6:0] [0:1] [10:0] initial_positions = {
 {-11'd30, 11'd2},{-11'd20, 11'd5},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd20, 11'd5},{11'd30, 11'd2}
 };
 logic signed [6:0] [0:1] [10:0] initial_speeds = {
 {-11'd8, 11'd1},{-11'd10, 11'd2},{-11'd10, 11'd10},{11'd0, 11'd15},{11'd10, 11'd10},{11'd10, 11'd2},{11'd15, 11'd1}
 };
+*/
+logic signed [MAX_STATE:0] [10:0] initial_positionsX = {
+11'd32, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd30, 11'd30, 11'd30, 11'd30, 11'd30, 11'd29, 11'd29, 11'd29, 11'd29, 11'd29, 11'd28, 11'd28, 11'd28, 11'd27, 11'd27, 11'd27, 11'd27, 11'd26, 11'd26, 11'd26, 11'd25, 11'd25, 11'd25, 11'd24, 11'd24, 11'd23, 11'd23, 11'd23, 11'd22, 11'd22, 11'd21, 11'd21, 11'd21, 11'd20, 11'd20, 11'd19, 11'd19, 11'd18, 11'd18, 11'd17, 11'd17, 11'd16, 11'd16, 11'd16, 11'd15, 11'd15, 11'd14, 11'd14, 11'd13, 11'd13, 11'd12, 11'd11, 11'd11, 11'd10, 11'd10, 11'd9, 11'd9, 11'd8, 11'd8, 11'd7, 11'd7, 11'd6, 11'd6, 11'd5, 11'd4, 11'd4, 11'd3, 11'd3, 11'd2, 11'd2, 11'd1, 11'd1, 11'd0, -11'd1, -11'd1, -11'd2, -11'd2, -11'd3, -11'd3, -11'd4, -11'd4, -11'd5, -11'd6, -11'd6, -11'd7, -11'd7, -11'd8, -11'd8, -11'd9, -11'd9, -11'd10, -11'd10, -11'd11, -11'd11, -11'd12, -11'd12, -11'd13, -11'd13, -11'd14, -11'd14, -11'd15, -11'd15, -11'd16, -11'd16, -11'd17, -11'd17, -11'd18, -11'd18, -11'd19, -11'd19, -11'd20, -11'd20, -11'd21, -11'd21, -11'd21, -11'd22, -11'd22, -11'd23, -11'd23, -11'd23, -11'd24, -11'd24, -11'd24, -11'd25, -11'd25, -11'd26, -11'd26, -11'd26, -11'd27, -11'd27, -11'd27, -11'd27, -11'd28, -11'd28, -11'd28, -11'd28, -11'd29, -11'd29, -11'd29, -11'd29, -11'd30, -11'd30, -11'd30, -11'd30, -11'd30, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd31, -11'd32
+};
+logic signed [MAX_STATE:0] [10:0] initial_positionsY = {
+11'd6, 11'd7, 11'd7, 11'd8, 11'd8, 11'd9, 11'd9, 11'd10, 11'd10, 11'd11, 11'd11, 11'd12, 11'd12, 11'd13, 11'd14, 11'd14, 11'd15, 11'd15, 11'd16, 11'd16, 11'd16, 11'd17, 11'd17, 11'd18, 11'd18, 11'd19, 11'd19, 11'd20, 11'd20, 11'd21, 11'd21, 11'd21, 11'd22, 11'd22, 11'd23, 11'd23, 11'd23, 11'd24, 11'd24, 11'd25, 11'd25, 11'd25, 11'd26, 11'd26, 11'd26, 11'd27, 11'd27, 11'd27, 11'd27, 11'd28, 11'd28, 11'd28, 11'd29, 11'd29, 11'd29, 11'd29, 11'd29, 11'd30, 11'd30, 11'd30, 11'd30, 11'd30, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd31, 11'd30, 11'd30, 11'd30, 11'd30, 11'd30, 11'd29, 11'd29, 11'd29, 11'd29, 11'd29, 11'd28, 11'd28, 11'd28, 11'd27, 11'd27, 11'd27, 11'd27, 11'd26, 11'd26, 11'd26, 11'd25, 11'd25, 11'd25, 11'd24, 11'd24, 11'd23, 11'd23, 11'd23, 11'd22, 11'd22, 11'd21, 11'd21, 11'd21, 11'd20, 11'd20, 11'd19, 11'd19, 11'd18, 11'd18, 11'd17, 11'd17, 11'd17, 11'd16, 11'd16, 11'd15, 11'd15, 11'd14, 11'd14, 11'd13, 11'd13, 11'd12, 11'd12, 11'd11, 11'd10, 11'd10, 11'd9, 11'd9, 11'd8, 11'd8, 11'd7, 11'd7, 11'd6, 11'd6, 11'd6
+};
+logic signed [MAX_STATE:0] [10:0] initial_speedsY = {
+11'd2, 11'd2, 11'd2, 11'd2, 11'd2, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd2, 11'd2, 11'd2, 11'd2, 11'd2
+};
+logic signed [MAX_STATE:0] [10:0] initial_speedsX = {
+11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd10, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd9, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd8, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd7, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd6, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd5, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd4, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd3, 11'd2, 11'd2, 11'd2, 11'd2, 11'd2, 11'd2, 11'd1, 11'd1, 11'd1, 11'd1, 11'd1, 11'd1, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, -11'd1, -11'd1, -11'd1, -11'd1, -11'd1, -11'd1, -11'd2, -11'd2, -11'd2, -11'd2, -11'd2, -11'd2, -11'd3, -11'd3, -11'd3, -11'd3, -11'd3, -11'd3, -11'd4, -11'd4, -11'd4, -11'd4, -11'd4, -11'd4, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd5, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd6, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd7, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd8, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd9, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10, -11'd10
+};
+
+
 
 
 logic[5:0] frame_counter;
-logic [3:0] circular_ps;
-logic [3:0] circular_ns;
+logic [7:0] circular_ps;
+logic [7:0] circular_ns;
 logic isInStartingLocation;
 logic collisionFlag;// 1 if collision happend, 0 else
 
@@ -62,17 +79,13 @@ const int   OBJECT_WIDTH_X = 64;
  
 logic signed [10:0] topLeftX_FixedPoint, topLeftY_FixedPoint;
 logic signed [10:0] Xspeed, Yspeed ;
-logic signed [10:0] InitPosX ;
-assign InitPosX = initial_positions[circular_ps][0];
+
 
 
 //////////--------------------------------------------------------------------------------------------------------------=
 //  calculation 0f Y Axis speed using gravity or colision
 
-assign isInStartingLocation = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X)) && (topLeftY == (initial_positions[circular_ps][1] + INITIAL_Y));
-
-assign isInX = (topLeftX == (initial_positions[circular_ps][0] + INITIAL_X));
-assign XINIT_POS = initial_positions[circular_ps][0];
+assign isInStartingLocation = (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
 
 always_ff@(posedge clk or negedge resetN)
 begin
@@ -82,9 +95,9 @@ begin
 	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
-		topLeftY_FixedPoint	<= (initial_positions[0][1] + INITIAL_Y) * FIXED_POINT_MULTIPLIER;
+		topLeftY_FixedPoint	<= (initial_positionsY[0] + INITIAL_Y) * FIXED_POINT_MULTIPLIER;
 		Xspeed	<= INITIAL_X_SPEED;
-		topLeftX_FixedPoint	<= (initial_positions[0][0] + INITIAL_X) * FIXED_POINT_MULTIPLIER;
+		topLeftX_FixedPoint	<= (initial_positionsX[0] + INITIAL_X) * FIXED_POINT_MULTIPLIER;
 		movement_type <= CIRCULAR;
 		circular_direction <= RIGHT;
 		circular_ps <= 0;
@@ -108,8 +121,8 @@ begin
 			end
 			if(launch_Cable)
 			begin
-				Yspeed <= initial_speeds[circular_ps][1]; 
-				Xspeed <= initial_speeds[circular_ps][0]; 
+				Yspeed <= initial_speedsY[circular_ps]; 
+				Xspeed <= initial_speedsX[circular_ps]; 
 				movement_type <= STRAIGHT;
 			end
 		end
@@ -124,9 +137,9 @@ begin
 		begin
 			if(circular_direction == RIGHT)
 			begin
-				if(circular_ps == 6)
+				if(circular_ps == MAX_STATE)
 					begin
-						circular_ns <= 5;
+						circular_ns <= MAX_STATE - 1;
 						circular_direction <= LEFT;
 					end
 					else circular_ns <= circular_ps + 1;
@@ -146,7 +159,8 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-				frame_counter <= (frame_counter +1) % 48;
+				//frame_counter <= (frame_counter +1) % 48;
+				frame_counter = 0;
 				if( frame_counter == 0 && movement_type == CIRCULAR) circular_ps <= circular_ns;
 				
 				if(movement_type == STRAIGHT)
@@ -157,8 +171,8 @@ begin
 				
 				else if(movement_type == CIRCULAR)
 				begin
-					topLeftY_FixedPoint  <= initial_positions[circular_ps][1] + INITIAL_Y; // position interpolation 
-					topLeftX_FixedPoint  <= initial_positions[circular_ps][0] + INITIAL_X; // position interpolation 
+					topLeftY_FixedPoint  <= initial_positionsY[circular_ps] + INITIAL_Y; // position interpolation 
+					topLeftX_FixedPoint  <= initial_positionsX[circular_ps] + INITIAL_X; // position interpolation 
 				end
 		end
 	end

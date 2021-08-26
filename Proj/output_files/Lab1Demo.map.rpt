@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Wed Aug 25 20:48:29 2021
+Thu Aug 26 20:00:51 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -18,42 +18,42 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  10. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|lpf:inst5|cur_st
  11. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4|pres_st
  12. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|present_state
- 13. Registers Protected by Synthesis
- 14. Registers Removed During Synthesis
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for AUDIO:inst18|audio_codec_controller:inst2
- 19. Source assignments for KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4
- 20. Source assignments for random:inst2
- 21. Source assignments for random:inst7
- 22. Source assignments for sld_signaltap:auto_signaltap_0
- 23. Parameter Settings for User Entity Instance: back_ground_draw:inst4
- 24. Parameter Settings for User Entity Instance: clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i
- 25. Parameter Settings for User Entity Instance: Smiley_Block:inst1
- 26. Parameter Settings for User Entity Instance: Smiley_Block:inst1|square_object:inst6
- 27. Parameter Settings for User Entity Instance: Smiley_Block:inst1|smileyface_moveCollision:inst
- 28. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst1
- 29. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|KBDINTF:inst|lpf:inst5
- 30. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst3
- 31. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst
- 32. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst1
- 33. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst2
- 34. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst3
- 35. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst4
- 36. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst5
- 37. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst6
- 38. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst7
- 39. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst8
- 40. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst9
- 41. Parameter Settings for User Entity Instance: random:inst2
- 42. Parameter Settings for User Entity Instance: random:inst7
- 43. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11
- 44. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component
- 45. Parameter Settings for User Entity Instance: AUDIO:inst18|sintable:inst1
- 46. Parameter Settings for User Entity Instance: AUDIO:inst18|addr_counter:inst9
- 47. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 48. Parameter Settings for Inferred Entity Instance: Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0
+ 13. State Machine - |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter
+ 14. Registers Protected by Synthesis
+ 15. Registers Removed During Synthesis
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for AUDIO:inst18|audio_codec_controller:inst2
+ 20. Source assignments for KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4
+ 21. Source assignments for random:inst2
+ 22. Source assignments for random:inst7
+ 23. Source assignments for sld_signaltap:auto_signaltap_0
+ 24. Parameter Settings for User Entity Instance: back_ground_draw:inst4
+ 25. Parameter Settings for User Entity Instance: clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i
+ 26. Parameter Settings for User Entity Instance: Smiley_Block:inst1
+ 27. Parameter Settings for User Entity Instance: Smiley_Block:inst1|square_object:inst6
+ 28. Parameter Settings for User Entity Instance: Smiley_Block:inst1|smileyface_moveCollision:inst
+ 29. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst1
+ 30. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|KBDINTF:inst|lpf:inst5
+ 31. Parameter Settings for User Entity Instance: KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst3
+ 32. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst
+ 33. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst1
+ 34. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst2
+ 35. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst3
+ 36. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst4
+ 37. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst5
+ 38. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst6
+ 39. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst7
+ 40. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst8
+ 41. Parameter Settings for User Entity Instance: vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst9
+ 42. Parameter Settings for User Entity Instance: random:inst2
+ 43. Parameter Settings for User Entity Instance: random:inst7
+ 44. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11
+ 45. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component
+ 46. Parameter Settings for User Entity Instance: AUDIO:inst18|sintable:inst1
+ 47. Parameter Settings for User Entity Instance: AUDIO:inst18|addr_counter:inst9
+ 48. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  49. SignalTap II Logic Analyzer Settings
  50. In-System Memory Content Editor Settings
  51. Post-Synthesis Netlist Statistics for Top Partition
@@ -87,13 +87,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Aug 25 20:48:29 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 26 20:00:50 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2185                                        ;
+; Total registers                 ; 2187                                        ;
 ; Total pins                      ; 58                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 229,504                                     ;
@@ -330,16 +330,16 @@ agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                             ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 3987                                                                                              ;
+; Estimate of Logic utilization (ALMs needed) ; 3913                                                                                              ;
 ;                                             ;                                                                                                   ;
-; Combinational ALUT usage for logic          ; 5517                                                                                              ;
-;     -- 7 input functions                    ; 78                                                                                                ;
-;     -- 6 input functions                    ; 2115                                                                                              ;
-;     -- 5 input functions                    ; 1249                                                                                              ;
-;     -- 4 input functions                    ; 680                                                                                               ;
-;     -- <=3 input functions                  ; 1395                                                                                              ;
+; Combinational ALUT usage for logic          ; 5463                                                                                              ;
+;     -- 7 input functions                    ; 80                                                                                                ;
+;     -- 6 input functions                    ; 2019                                                                                              ;
+;     -- 5 input functions                    ; 1333                                                                                              ;
+;     -- 4 input functions                    ; 695                                                                                               ;
+;     -- <=3 input functions                  ; 1336                                                                                              ;
 ;                                             ;                                                                                                   ;
-; Dedicated logic registers                   ; 2185                                                                                              ;
+; Dedicated logic registers                   ; 2187                                                                                              ;
 ;                                             ;                                                                                                   ;
 ; I/O pins                                    ; 58                                                                                                ;
 ; Total MLAB memory bits                      ; 0                                                                                                 ;
@@ -351,8 +351,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                 ;
 ;                                             ;                                                                                                   ;
 ; Maximum fan-out node                        ; clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 1348                                                                                              ;
-; Total fan-out                               ; 34103                                                                                             ;
+; Maximum fan-out                             ; 1350                                                                                              ;
+; Total fan-out                               ; 33937                                                                                             ;
 ; Average fan-out                             ; 4.34                                                                                              ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 
@@ -362,7 +362,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                     ; Entity Name                                   ; Library Name  ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
-; |TOP_VGA_DEMO_KBD                                                                                                                       ; 5517 (3)            ; 2185 (0)                  ; 229504            ; 0          ; 58   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                                                                       ; TOP_VGA_DEMO_KBD                              ; work          ;
+; |TOP_VGA_DEMO_KBD                                                                                                                       ; 5463 (3)            ; 2187 (0)                  ; 229504            ; 0          ; 58   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                                                                       ; TOP_VGA_DEMO_KBD                              ; work          ;
 ;    |AUDIO:inst18|                                                                                                                       ; 535 (0)             ; 601 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18                                                                                                                                                                                                                                                                                                                                                                          ; AUDIO                                         ; work          ;
 ;       |ToneDecoder:inst4|                                                                                                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|ToneDecoder:inst4                                                                                                                                                                                                                                                                                                                                                        ; ToneDecoder                                   ; work          ;
 ;       |addr_counter:inst9|                                                                                                              ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|addr_counter:inst9                                                                                                                                                                                                                                                                                                                                                       ; addr_counter                                  ; work          ;
@@ -450,8 +450,8 @@ agreement for further details.
 ;          |i2c:i2c_inst|                                                                                                                 ; 31 (31)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|i2c:i2c_inst                                                                                                                                                                                                                                                                                                                                ; i2c                                           ; work          ;
 ;       |prescaler:inst3|                                                                                                                 ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|prescaler:inst3                                                                                                                                                                                                                                                                                                                                                          ; prescaler                                     ; work          ;
 ;       |sintable:inst1|                                                                                                                  ; 40 (40)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|sintable:inst1                                                                                                                                                                                                                                                                                                                                                           ; sintable                                      ; work          ;
-;    |HART_DISPLAY:inst5|                                                                                                                 ; 450 (0)             ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5                                                                                                                                                                                                                                                                                                                                                                    ; HART_DISPLAY                                  ; work          ;
-;       |HartsMatrixBitMap:inst6|                                                                                                         ; 335 (335)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|HartsMatrixBitMap:inst6                                                                                                                                                                                                                                                                                                                                            ; HartsMatrixBitMap                             ; work          ;
+;    |HART_DISPLAY:inst5|                                                                                                                 ; 449 (0)             ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5                                                                                                                                                                                                                                                                                                                                                                    ; HART_DISPLAY                                  ; work          ;
+;       |HartsMatrixBitMap:inst6|                                                                                                         ; 334 (334)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|HartsMatrixBitMap:inst6                                                                                                                                                                                                                                                                                                                                            ; HartsMatrixBitMap                             ; work          ;
 ;       |matrix_top_XY:inst|                                                                                                              ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst                                                                                                                                                                                                                                                                                                                                                 ; matrix_top_XY                                 ; work          ;
 ;          |lpm_constant:LPM_CONSTANT_component|                                                                                          ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component                                                                                                                                                                                                                                                                                                             ; lpm_constant                                  ; work          ;
 ;             |lpm_constant_gj8:ag|                                                                                                       ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag                                                                                                                                                                                                                                                                                         ; lpm_constant_gj8                              ; work          ;
@@ -463,19 +463,15 @@ agreement for further details.
 ;          |bitrec:inst4|                                                                                                                 ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4                                                                                                                                                                                                                                                                                                                                   ; bitrec                                        ; work          ;
 ;          |byterec:inst3|                                                                                                                ; 19 (19)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3                                                                                                                                                                                                                                                                                                                                  ; byterec                                       ; work          ;
 ;          |lpf:inst5|                                                                                                                    ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|lpf:inst5                                                                                                                                                                                                                                                                                                                                      ; lpf                                           ; work          ;
-;       |keyPad_decoder:inst2|                                                                                                            ; 23 (23)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyPad_decoder:inst2                                                                                                                                                                                                                                                                                                                                        ; keyPad_decoder                                ; work          ;
-;       |keyToggle_decoder:inst3|                                                                                                         ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst3                                                                                                                                                                                                                                                                                                                                     ; keyToggle_decoder                             ; work          ;
+;       |keyPad_decoder:inst2|                                                                                                            ; 22 (22)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyPad_decoder:inst2                                                                                                                                                                                                                                                                                                                                        ; keyPad_decoder                                ; work          ;
+;       |keyToggle_decoder:inst3|                                                                                                         ; 5 (5)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst3                                                                                                                                                                                                                                                                                                                                     ; keyToggle_decoder                             ; work          ;
 ;    |SEG7:inst10|                                                                                                                        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|SEG7:inst10                                                                                                                                                                                                                                                                                                                                                                           ; SEG7                                          ; work          ;
-;    |Smiley_Block:inst1|                                                                                                                 ; 481 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1                                                                                                                                                                                                                                                                                                                                                                    ; Smiley_Block                                  ; work          ;
-;       |smileyBitMap:inst1|                                                                                                              ; 272 (272)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyBitMap:inst1                                                                                                                                                                                                                                                                                                                                                 ; smileyBitMap                                  ; work          ;
-;       |smileyface_moveCollision:inst|                                                                                                   ; 142 (117)           ; 61 (61)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst                                                                                                                                                                                                                                                                                                                                      ; smileyface_moveCollision                      ; work          ;
-;          |lpm_divide:Mod0|                                                                                                              ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                                      ; lpm_divide                                    ; work          ;
-;             |lpm_divide_92m:auto_generated|                                                                                             ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0|lpm_divide_92m:auto_generated                                                                                                                                                                                                                                                                                        ; lpm_divide_92m                                ; work          ;
-;                |sign_div_unsign_ckh:divider|                                                                                            ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0|lpm_divide_92m:auto_generated|sign_div_unsign_ckh:divider                                                                                                                                                                                                                                                            ; sign_div_unsign_ckh                           ; work          ;
-;                   |alt_u_div_use:divider|                                                                                               ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0|lpm_divide_92m:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_use:divider                                                                                                                                                                                                                                      ; alt_u_div_use                                 ; work          ;
-;       |square_object:inst6|                                                                                                             ; 67 (67)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|square_object:inst6                                                                                                                                                                                                                                                                                                                                                ; square_object                                 ; work          ;
-;    |VGA_Controller:inst|                                                                                                                ; 77 (77)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|VGA_Controller:inst                                                                                                                                                                                                                                                                                                                                                                   ; VGA_Controller                                ; work          ;
-;    |back_ground_draw:inst4|                                                                                                             ; 62 (62)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4                                                                                                                                                                                                                                                                                                                                                                ; back_ground_draw                              ; work          ;
+;    |Smiley_Block:inst1|                                                                                                                 ; 526 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1                                                                                                                                                                                                                                                                                                                                                                    ; Smiley_Block                                  ; work          ;
+;       |smileyBitMap:inst1|                                                                                                              ; 268 (268)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyBitMap:inst1                                                                                                                                                                                                                                                                                                                                                 ; smileyBitMap                                  ; work          ;
+;       |smileyface_moveCollision:inst|                                                                                                   ; 193 (193)           ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst                                                                                                                                                                                                                                                                                                                                      ; smileyface_moveCollision                      ; work          ;
+;       |square_object:inst6|                                                                                                             ; 65 (65)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|square_object:inst6                                                                                                                                                                                                                                                                                                                                                ; square_object                                 ; work          ;
+;    |VGA_Controller:inst|                                                                                                                ; 76 (76)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|VGA_Controller:inst                                                                                                                                                                                                                                                                                                                                                                   ; VGA_Controller                                ; work          ;
+;    |back_ground_draw:inst4|                                                                                                             ; 58 (58)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4                                                                                                                                                                                                                                                                                                                                                                ; back_ground_draw                              ; work          ;
 ;    |clock_divider:inst12|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12                                                                                                                                                                                                                                                                                                                                                                  ; clock_divider                                 ; clock_divider ;
 ;       |clock_divider_0002:clock_divider_inst|                                                                                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst                                                                                                                                                                                                                                                                                                                            ; clock_divider_0002                            ; clock_divider ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                                                    ; altera_pll                                    ; work          ;
@@ -643,20 +639,20 @@ agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 1 (1)               ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                          ; lpm_shiftreg                                  ; work          ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                                                                       ; lpm_shiftreg                                  ; work          ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                                                                     ; sld_rom_sr                                    ; work          ;
-;    |vaccine_Block:inst6|                                                                                                                ; 3312 (0)            ; 424 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6                                                                                                                                                                                                                                                                                                                                                                   ; vaccine_Block                                 ; work          ;
-;       |10_Square_Objects:inst4|                                                                                                         ; 660 (0)             ; 130 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4                                                                                                                                                                                                                                                                                                                                           ; 10_Square_Objects                             ; work          ;
-;          |square_object:inst1|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst1                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst2|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst2                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst3|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst3                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst4|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst4                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst5|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst5                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst6|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst6                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst7|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst7                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst8|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst8                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst9|                                                                                                          ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst9                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
-;          |square_object:inst|                                                                                                           ; 66 (66)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst                                                                                                                                                                                                                                                                                                                        ; square_object                                 ; work          ;
-;       |Vaccines_positions_collision:inst2|                                                                                              ; 134 (134)           ; 234 (234)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|Vaccines_positions_collision:inst2                                                                                                                                                                                                                                                                                                                                ; Vaccines_positions_collision                  ; work          ;
-;       |vaccineBitMap:inst|                                                                                                              ; 2518 (2518)         ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst                                                                                                                                                                                                                                                                                                                                                ; vaccineBitMap                                 ; work          ;
+;    |vaccine_Block:inst6|                                                                                                                ; 3219 (0)            ; 424 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6                                                                                                                                                                                                                                                                                                                                                                   ; vaccine_Block                                 ; work          ;
+;       |10_Square_Objects:inst4|                                                                                                         ; 580 (0)             ; 130 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4                                                                                                                                                                                                                                                                                                                                           ; 10_Square_Objects                             ; work          ;
+;          |square_object:inst1|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst1                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst2|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst2                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst3|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst3                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst4|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst4                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst5|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst5                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst6|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst6                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst7|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst7                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst8|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst8                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst9|                                                                                                          ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst9                                                                                                                                                                                                                                                                                                                       ; square_object                                 ; work          ;
+;          |square_object:inst|                                                                                                           ; 58 (58)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|10_Square_Objects:inst4|square_object:inst                                                                                                                                                                                                                                                                                                                        ; square_object                                 ; work          ;
+;       |Vaccines_positions_collision:inst2|                                                                                              ; 138 (138)           ; 234 (234)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|Vaccines_positions_collision:inst2                                                                                                                                                                                                                                                                                                                                ; Vaccines_positions_collision                  ; work          ;
+;       |vaccineBitMap:inst|                                                                                                              ; 2501 (2501)         ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst                                                                                                                                                                                                                                                                                                                                                ; vaccineBitMap                                 ; work          ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+---------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -730,6 +726,16 @@ Encoding Type:  One-Hot
 ; present_state.wait_ext_rel_ST   ; 0                               ; 1                             ; 0                           ; 0                         ; 0                          ; 0                           ; 0                         ; 0                         ; 0                           ; 1                     ;
 ; present_state.sample_ext_rel_ST ; 1                               ; 0                             ; 0                           ; 0                         ; 0                          ; 0                           ; 0                         ; 0                         ; 0                           ; 1                     ;
 +---------------------------------+---------------------------------+-------------------------------+-----------------------------+---------------------------+----------------------------+-----------------------------+---------------------------+---------------------------+-----------------------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter ;
++--------------------------------------------------------------------------------------------------+
+; Name                                                                                             ;
++--------------------------------------------------------------------------------------------------+
+; frame_counter.000000                                                                             ;
++--------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -815,7 +821,13 @@ Encoding Type:  One-Hot
 ; KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|present_state~5 ; Lost fanout                            ;
 ; KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|present_state~6 ; Lost fanout                            ;
 ; KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|present_state~7 ; Lost fanout                            ;
-; Total Number of Removed Registers = 26                               ;                                        ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~5     ; Lost fanout                            ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~6     ; Lost fanout                            ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~7     ; Lost fanout                            ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~8     ; Lost fanout                            ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~9     ; Lost fanout                            ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|frame_counter~10    ; Lost fanout                            ;
+; Total Number of Removed Registers = 32                               ;                                        ;
 +----------------------------------------------------------------------+----------------------------------------+
 
 
@@ -824,12 +836,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2185  ;
-; Number of registers using Synchronous Clear  ; 502   ;
-; Number of registers using Synchronous Load   ; 217   ;
-; Number of registers using Asynchronous Clear ; 1180  ;
+; Total registers                              ; 2187  ;
+; Number of registers using Synchronous Clear  ; 507   ;
+; Number of registers using Synchronous Load   ; 233   ;
+; Number of registers using Asynchronous Clear ; 1182  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1221  ;
+; Number of registers using Clock Enable       ; 1224  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -839,14 +851,14 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------------+---------+
 ; Inverted Register                                                        ; Fan out ;
 +--------------------------------------------------------------------------+---------+
-; VGA_Controller:inst|oVGA_VS                                              ; 5       ;
+; VGA_Controller:inst|oVGA_VS                                              ; 4       ;
 ; VGA_Controller:inst|oVGA_HS                                              ; 4       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[0]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[1]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[2]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[3]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[4]   ; 9       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[5]   ; 9       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[5]   ; 13      ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[6]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[7]   ; 9       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|draw_request[8]   ; 9       ;
@@ -860,86 +872,86 @@ Encoding Type:  One-Hot
 ; back_ground_draw:inst4|blueBits[1]                                       ; 1       ;
 ; back_ground_draw:inst4|blueBits[0]                                       ; 1       ;
 ; VGA_Controller:inst|oVGA_HS_d                                            ; 1       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[6]  ; 11      ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[1]  ; 5       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[3]  ; 4       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[5]  ; 5       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[4]  ; 5       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[2]  ; 5       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[1]  ; 5       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[6]  ; 9       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[2]  ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[1]  ; 6       ;
 ; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[8]  ; 8       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[0][6] ; 10      ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][6] ; 7       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[0][2] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[0][1] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][6] ; 8       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][7] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[0][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[1][6] ; 10      ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[1][4] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[1][8] ; 5       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[1][6] ; 8       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][7] ; 9       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][2] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][3] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[2][7] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[0][1] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[0][6] ; 10      ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[2][5] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[3][7] ; 9       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[2][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][2] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[2][7] ; 8       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[1][8] ; 5       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[1][6] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[1][4] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[1][6] ; 10      ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][6] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[3][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[3][7] ; 8       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[3][6] ; 10      ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[3][3] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][6] ; 8       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][7] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[3][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][8] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][7] ; 9       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][6] ; 10      ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][5] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][8] ; 5       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][6] ; 8       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][3] ; 2       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][5] ; 3       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][4] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][2] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][8] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][6] ; 10      ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][1] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][5] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][4] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][7] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][2] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][8] ; 5       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[7][6] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][5] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][7] ; 8       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][8] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[7][6] ; 10      ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][3] ; 2       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][5] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][1] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][8] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][7] ; 9       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][5] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][4] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][3] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][7] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][1] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[6][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][5] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][4] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][1] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][8] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[6][6] ; 10      ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][5] ; 3       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][4] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][2] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][8] ; 7       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][6] ; 10      ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][1] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][3] ; 4       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][2] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[8][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][5] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][4] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][7] ; 8       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[8][8] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][1] ; 2       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][8] ; 5       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][6] ; 8       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][1] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][7] ; 9       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][1] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][5] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][3] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][8] ; 5       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][7] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[5][6] ; 7       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][1] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][8] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[5][6] ; 10      ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][3] ; 2       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][4] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][3] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][1] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][9] ; 5       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][1] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[4][8] ; 5       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][3] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][5] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][1] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[4][7] ; 8       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[9][5] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[9][4] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[9][2] ; 2       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[9][7] ; 6       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][5] ; 3       ;
 ; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][2] ; 3       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][1] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][5] ; 4       ;
-; vaccine_Block:inst6|Vaccines_positions_collision:inst2|Y_positions[9][7] ; 7       ;
-; Total number of inverted registers = 170*                                ;         ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][1] ; 3       ;
+; vaccine_Block:inst6|Vaccines_positions_collision:inst2|X_positions[9][9] ; 5       ;
+; random:inst7|dout[3]                                                     ; 10      ;
+; Total number of inverted registers = 166*                                ;         ;
 +--------------------------------------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -949,25 +961,25 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[10]                                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[7]                                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[1] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|circular_ns[7]                                                                                                                                ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[9]                                                                                                                                     ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[3]                                                                                                                                     ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]      ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[2][4]                                                                                                                                            ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[3][1]                                                                                                                                            ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[4][1]                                                                                                                                            ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[3]                                                                                                                                     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[2][1]                                                                                                                                            ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[3][4]                                                                                                                                            ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[4][4]                                                                                                                                            ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[5][4]                                                                                                                                            ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[6][4]                                                                                                                                            ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[7][4]                                                                                                                                            ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[8][4]                                                                                                                                            ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[9][1]                                                                                                                                            ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[0][1]                                                                                                                                            ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[9][4]                                                                                                                                            ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[0][4]                                                                                                                                            ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|RGBout[1][4]                                                                                                                                            ;
-; 12:1               ; 5 bits    ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[2]                                                                                                                                     ;
 ; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux_new:inst8|RGBOut[5]                                                                                                                                                                ;
-; 13:1               ; 6 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux_new:inst8|RGBOut[4]                                                                                                                                                                ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyPad_decoder:inst2|key[3]                                                                                                                                          ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux_new:inst8|RGBOut[7]                                                                                                                                                                ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|keyPad_decoder:inst2|key[0]                                                                                                                                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|blueBits[0]                                                                                                                                                             ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|Mux543                                                                                                                                                  ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|Mux726                                                                                                                                                  ;
@@ -979,10 +991,10 @@ Encoding Type:  One-Hot
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|Mux1824                                                                                                                                                 ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|Mux177                                                                                                                                                  ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|vaccine_Block:inst6|vaccineBitMap:inst|Mux360                                                                                                                                                  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|game_controller_all:inst9|collision_clamp_vaccine[1]                                                                                                                                           ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4|Selector7                                                                                                                                  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|game_controller_all:inst9|collision_clamp_vaccine[2]                                                                                                                                           ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4|Selector6                                                                                                                                  ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4|Selector4                                                                                                                                  ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|Selector6                                                                                                                                 ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|byterec:inst3|Selector3                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2069,29 +2081,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0 ;
-+------------------------+----------------+-------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                 ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                                 ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                 ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                 ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                 ;
-; CBXI_PARAMETER         ; lpm_divide_92m ; Untyped                                                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                          ;
-+------------------------+----------------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                                                    ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
@@ -2115,40 +2104,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------+---------------+
 ; Type                                ; Count         ;
 +-------------------------------------+---------------+
-; arriav_ff                           ; 777           ;
-;     CLR                             ; 184           ;
+; arriav_ff                           ; 779           ;
+;     CLR                             ; 183           ;
 ;     CLR SCLR                        ; 63            ;
 ;     ENA                             ; 38            ;
-;     ENA CLR                         ; 301           ;
-;     ENA CLR SCLR                    ; 30            ;
+;     ENA CLR                         ; 283           ;
+;     ENA CLR SCLR                    ; 35            ;
+;     ENA CLR SLD                     ; 16            ;
 ;     ENA SCLR                        ; 149           ;
 ;     ENA SLD                         ; 11            ;
 ;     plain                           ; 1             ;
-; arriav_lcell_comb                   ; 4671          ;
-;     arith                           ; 358           ;
-;         0 data inputs               ; 28            ;
-;         1 data inputs               ; 138           ;
-;         2 data inputs               ; 25            ;
-;         3 data inputs               ; 2             ;
-;         4 data inputs               ; 16            ;
+; arriav_lcell_comb                   ; 4617          ;
+;     arith                           ; 349           ;
+;         0 data inputs               ; 24            ;
+;         1 data inputs               ; 136           ;
+;         2 data inputs               ; 31            ;
+;         4 data inputs               ; 9             ;
 ;         5 data inputs               ; 149           ;
-;     extend                          ; 71            ;
-;         7 data inputs               ; 71            ;
-;     normal                          ; 4242          ;
+;     extend                          ; 73            ;
+;         7 data inputs               ; 73            ;
+;     normal                          ; 4195          ;
 ;         0 data inputs               ; 2             ;
 ;         1 data inputs               ; 142           ;
-;         2 data inputs               ; 209           ;
-;         3 data inputs               ; 408           ;
-;         4 data inputs               ; 556           ;
-;         5 data inputs               ; 982           ;
-;         6 data inputs               ; 1943          ;
+;         2 data inputs               ; 164           ;
+;         3 data inputs               ; 396           ;
+;         4 data inputs               ; 578           ;
+;         5 data inputs               ; 1066          ;
+;         6 data inputs               ; 1847          ;
 ; blackbox                            ; 1             ;
 ;         udio_codec_controller:inst2 ; 1             ;
 ; boundary_port                       ; 113           ;
 ; generic_pll                         ; 1             ;
 ;                                     ;               ;
-; Max LUT depth                       ; 7.00          ;
-; Average LUT depth                   ; 4.65          ;
+; Max LUT depth                       ; 6.00          ;
+; Average LUT depth                   ; 4.53          ;
 +-------------------------------------+---------------+
 
 
@@ -2157,7 +2146,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:41     ;
+; Top            ; 00:03:03     ;
 +----------------+--------------+
 
 
@@ -2264,7 +2253,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Aug 25 20:46:17 2021
+    Info: Processing started: Thu Aug 26 19:51:42 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/top_vga_demo_kbd.bdf
@@ -2368,8 +2357,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga
     Info (12023): Found entity 1: vaccine_Block
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/line.sv
     Info (12023): Found entity 1: Line File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/Line.sv Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at smileyface_moveCollision.sv(74): created implicit net for "isInX" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 74
-Warning (10236): Verilog HDL Implicit Net warning at smileyface_moveCollision.sv(75): created implicit net for "XINIT_POS" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 75
 Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(36): created implicit net for "nor_code" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/byterec.sv Line: 36
 Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(37): created implicit net for "ext_code" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/byterec.sv Line: 37
 Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(38): created implicit net for "rel_code" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/KEYBOARD/byterec.sv Line: 38
@@ -2459,33 +2446,31 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "hit_colors" into its bus
 Info (12128): Elaborating entity "square_object" for hierarchy "Smiley_Block:inst1|square_object:inst6"
 Info (12128): Elaborating entity "smileyface_moveCollision" for hierarchy "Smiley_Block:inst1|smileyface_moveCollision:inst"
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(74): object "isInX" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 74
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(75): object "XINIT_POS" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 75
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(58): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 58
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(59): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 59
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(60): object "bracketOffset" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 60
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(61): object "OBJECT_WIDTH_X" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 61
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(65): object "InitPosX" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(75): truncated value with size 11 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 75
-Critical Warning (10237): Verilog HDL warning at smileyface_moveCollision.sv(79): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 79
-Critical Warning (10237): Verilog HDL warning at smileyface_moveCollision.sv(80): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(84): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 84
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(85): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(86): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 86
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(87): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(88): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(89): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 89
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(106): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 106
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(113): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 113
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(130): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 130
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(132): truncated value with size 32 to match size of target (4) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 132
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(140): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 140
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(142): truncated value with size 32 to match size of target (4) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 142
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(149): truncated value with size 32 to match size of target (6) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 149
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(168): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 168
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(169): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 169
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "initial_positions" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "initial_speeds" into its bus
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(75): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 75
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(76): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 76
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(77): object "bracketOffset" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 77
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(78): object "OBJECT_WIDTH_X" assigned a value but never read File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(50): truncated value with size 1771 to match size of target (1760) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(53): truncated value with size 1771 to match size of target (1760) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(56): truncated value with size 1771 to match size of target (1760) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(59): truncated value with size 1771 to match size of target (1760) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 59
+Critical Warning (10237): Verilog HDL warning at smileyface_moveCollision.sv(92): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 92
+Critical Warning (10237): Verilog HDL warning at smileyface_moveCollision.sv(93): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 93
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(97): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(98): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(100): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 100
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(101): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 101
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(102): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(119): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(126): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(142): truncated value with size 32 to match size of target (8) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 142
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(143): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 143
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(145): truncated value with size 32 to match size of target (8) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 145
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(153): truncated value with size 32 to match size of target (1) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 153
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(155): truncated value with size 32 to match size of target (8) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 155
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(182): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 182
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(183): truncated value with size 32 to match size of target (11) File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 183
 Info (12128): Elaborating entity "KEYBOARD_INTERFACE" for hierarchy "KEYBOARD_INTERFACE:inst19"
 Info (12128): Elaborating entity "keyToggle_decoder" for hierarchy "KEYBOARD_INTERFACE:inst19|keyToggle_decoder:inst1"
 Info (12128): Elaborating entity "KBDINTF" for hierarchy "KEYBOARD_INTERFACE:inst19|KBDINTF:inst"
@@ -2583,7 +2568,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.08.25.20:47:04 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.08.26.19:55:15 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2607,21 +2592,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld6dfc5e3d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/db/ip/sld6dfc5e3d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12240): Synthesis found one or more imported partitions that will be treated as black boxes for timing analysis during synthesis
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Smiley_Block:inst1|smileyface_moveCollision:inst|Mod0" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 149
-Info (12130): Elaborated megafunction instantiation "Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 149
-Info (12133): Instantiated megafunction "Smiley_Block:inst1|smileyface_moveCollision:inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 149
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_92m.tdf
-    Info (12023): Found entity 1: lpm_divide_92m File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/db/lpm_divide_92m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ckh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ckh File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/db/sign_div_unsign_ckh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_use.tdf
-    Info (12023): Found entity 1: alt_u_div_use File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/db/alt_u_div_use.tdf Line: 23
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 101
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/RTL/VGA/smileyface_moveCollision.sv Line: 114
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "AUDOUT~synth"
@@ -2635,7 +2606,7 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "OVGA[26]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/output_files/Lab1Demo.map.smsg
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 87 of its 89 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (35026): Attempting to remove 150 I/O cell(s) that do not connect to top-level pins or have illegal connectivity
@@ -3010,18 +2981,18 @@ Info (35003): Optimize away 266 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "AUDIO:inst18|audio_codec_controller:inst2|adc2parallel:adc2parallel_right_inst|synch_fifo:adc_synch_fifo_inst|dcfifo:dcfifo_component|dcfifo_8il1:auto_generated|altdpram:fiforam|lpm_decode:wdecoder|decode_mpf:auto_generated|w_anode317w[3]" File: C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/Proj/audio_codec_controller.qxp Line: -1
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 6707 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6656 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 46 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 6613 logic cells
+    Info (21061): Implemented 6562 logic cells
     Info (21064): Implemented 30 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 5005 megabytes
-    Info: Processing ended: Wed Aug 25 20:48:29 2021
-    Info: Elapsed time: 00:02:12
-    Info: Total CPU time (on all processors): 00:02:47
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 4970 megabytes
+    Info: Processing ended: Thu Aug 26 20:00:52 2021
+    Info: Elapsed time: 00:09:10
+    Info: Total CPU time (on all processors): 00:07:42
 
 
 +------------------------------------------+
