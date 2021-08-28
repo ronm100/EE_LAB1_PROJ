@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect 40 -48 208 -32)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 17)(font "Intel Clear" ))
+	(text "clk" (rect 5 0 19 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ agreement for further details.
 	(input)
 	(rect 48 -16 216 0)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "resetN" (rect 5 0 36 17)(font "Intel Clear" ))
+	(text "resetN" (rect 5 0 35 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,7 @@ agreement for further details.
 	(input)
 	(rect 48 24 216 40)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pixelX[10..0]" (rect 5 0 65 17)(font "Intel Clear" ))
+	(text "pixelX[10..0]" (rect 5 0 64 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -72,7 +72,7 @@ agreement for further details.
 	(input)
 	(rect 48 56 216 72)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pixelY[10..0]" (rect 5 0 65 17)(font "Intel Clear" ))
+	(text "pixelY[10..0]" (rect 5 0 64 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -88,7 +88,7 @@ agreement for further details.
 	(input)
 	(rect 24 96 224 112)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
-	(text "topLeftX[9..0][10..0]" (rect 5 0 105 12)(font "Arial" ))
+	(text "topLeftX[0..9][10..0]" (rect 5 0 105 12)(font "Arial" ))
 	(pt 200 8)
 	(drawing
 		(line (pt 116 12)(pt 141 12))
@@ -104,7 +104,7 @@ agreement for further details.
 	(input)
 	(rect 24 128 216 144)
 	(text "INPUT" (rect 149 0 177 10)(font "Arial" (font_size 6)))
-	(text "topLeftY[9..0][10..0]" (rect 5 0 100 17)(font "Intel Clear" ))
+	(text "topLeftY[0..9][10..0]" (rect 5 0 100 17)(font "Intel Clear" ))
 	(pt 192 8)
 	(drawing
 		(line (pt 108 12)(pt 133 12))
@@ -120,7 +120,7 @@ agreement for further details.
 	(output)
 	(rect 1048 -24 1238 -8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "offsetX[9..0][10..0]" (rect 90 0 184 12)(font "Arial" ))
+	(text "offsetX[0..9][10..0]" (rect 90 0 184 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -136,7 +136,7 @@ agreement for further details.
 	(output)
 	(rect 1048 16 1231 32)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "offsetY[9..0][10..0]" (rect 90 0 177 17)(font "Intel Clear" ))
+	(text "offsetY[0..9][10..0]" (rect 90 0 177 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -152,7 +152,7 @@ agreement for further details.
 	(output)
 	(rect 1056 56 1252 72)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "drawingRequest[9..0]" (rect 90 0 190 17)(font "Intel Clear" ))
+	(text "drawingRequest[0..9]" (rect 90 0 190 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -168,7 +168,7 @@ agreement for further details.
 	(output)
 	(rect 1056 96 1235 112)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "RGBout[9..0][7..0]" (rect 90 0 173 17)(font "Intel Clear" ))
+	(text "RGBout[0..9][7..0]" (rect 90 0 173 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -1363,12 +1363,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "topLeftX[9..0][10..0]" (rect 224 88 318 105)(font "Intel Clear" ))
-	(pt 224 104)
-	(pt 272 104)
-	(bus)
-)
-(connector
 	(text "topLeftX[0][10..0]" (rect 384 48 467 65)(font "Intel Clear" ))
 	(pt 384 64)
 	(pt 432 64)
@@ -1429,12 +1423,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "topLeftY[9..0][10..0]" (rect 216 120 310 137)(font "Intel Clear" ))
-	(pt 216 136)
-	(pt 264 136)
-	(bus)
-)
-(connector
 	(text "topLeftY[0][10..0]" (rect 384 64 467 81)(font "Intel Clear" ))
 	(pt 384 80)
 	(pt 432 80)
@@ -1492,30 +1480,6 @@ agreement for further details.
 	(text "topLeftY[9][10..0]" (rect 512 1656 595 1673)(font "Intel Clear" ))
 	(pt 512 1672)
 	(pt 560 1672)
-	(bus)
-)
-(connector
-	(text "offsetX[9..0][10..0]" (rect 1008 -32 1095 -15)(font "Intel Clear" ))
-	(pt 1008 -16)
-	(pt 1048 -16)
-	(bus)
-)
-(connector
-	(text "offsetY[9..0][10..0]" (rect 1016 8 1103 25)(font "Intel Clear" ))
-	(pt 1016 24)
-	(pt 1048 24)
-	(bus)
-)
-(connector
-	(text "drawingRequest[9..0]" (rect 1024 48 1124 65)(font "Intel Clear" ))
-	(pt 1024 64)
-	(pt 1056 64)
-	(bus)
-)
-(connector
-	(text "RGBout[9..0][7..0]" (rect 1024 88 1107 105)(font "Intel Clear" ))
-	(pt 1024 104)
-	(pt 1056 104)
 	(bus)
 )
 (connector
@@ -1746,5 +1710,41 @@ agreement for further details.
 	(text "RGBout[9][7..0]" (rect 784 1624 857 1641)(font "Intel Clear" ))
 	(pt 824 1640)
 	(pt 784 1640)
+	(bus)
+)
+(connector
+	(text "topLeftX[0..9][10..0]" (rect 224 88 318 105)(font "Intel Clear" ))
+	(pt 224 104)
+	(pt 272 104)
+	(bus)
+)
+(connector
+	(text "topLeftY[0..9][10..0]" (rect 216 120 310 137)(font "Intel Clear" ))
+	(pt 216 136)
+	(pt 264 136)
+	(bus)
+)
+(connector
+	(text "offsetX[0..9][10..0]" (rect 1008 -32 1095 -15)(font "Intel Clear" ))
+	(pt 1008 -16)
+	(pt 1048 -16)
+	(bus)
+)
+(connector
+	(text "offsetY[0..9][10..0]" (rect 1016 8 1103 25)(font "Intel Clear" ))
+	(pt 1016 24)
+	(pt 1048 24)
+	(bus)
+)
+(connector
+	(text "drawingRequest[0..9]" (rect 1024 48 1124 65)(font "Intel Clear" ))
+	(pt 1024 64)
+	(pt 1056 64)
+	(bus)
+)
+(connector
+	(text "RGBout[0..9][7..0]" (rect 1024 88 1107 105)(font "Intel Clear" ))
+	(pt 1024 104)
+	(pt 1056 104)
 	(bus)
 )

@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 288 224)
+	(rect 16 16 288 256)
 	(text "objects_mux_new" (rect 5 0 76 12)(font "Arial" ))
-	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -55,15 +55,15 @@ agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "vaccineDrawingRequest[9..0]" (rect 0 0 116 12)(font "Arial" ))
-		(text "vaccineDrawingRequest[9..0]" (rect 21 91 137 103)(font "Arial" ))
+		(text "vaccineDrawingRequest[0..9]" (rect 0 0 116 12)(font "Arial" ))
+		(text "vaccineDrawingRequest[0..9]" (rect 21 91 137 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "vaccineRGB[9..0][7..0]" (rect 0 0 92 12)(font "Arial" ))
-		(text "vaccineRGB[9..0][7..0]" (rect 21 107 113 119)(font "Arial" ))
+		(text "vaccineRGB[0..9][7..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "vaccineRGB[0..9][7..0]" (rect 21 107 113 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
@@ -90,9 +90,16 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "lineDR" (rect 0 0 27 12)(font "Arial" ))
-		(text "lineDR" (rect 21 171 48 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 1))
+		(text "coronaDrawingRequest[0..9]" (rect 0 0 113 12)(font "Arial" ))
+		(text "coronaDrawingRequest[0..9]" (rect 21 171 134 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "coronaRGB[0..9][7..0]" (rect 0 0 88 12)(font "Arial" ))
+		(text "coronaRGB[0..9][7..0]" (rect 21 187 109 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
 		(pt 272 32)
@@ -102,6 +109,6 @@ agreement for further details.
 		(line (pt 272 32)(pt 256 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 256 192)(line_width 1))
+		(rectangle (rect 16 16 256 224)(line_width 1))
 	)
 )

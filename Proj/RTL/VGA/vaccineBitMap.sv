@@ -7,13 +7,13 @@
 
 					input	logic	clk, 
 					input	logic	resetN, 
-					input logic	[9:0] [10:0] offsetX,// offset from top left  position 
-					input logic	[9:0] [10:0] offsetY, 
-					input	logic	[9:0] InsideRectangle, //input that the pixel is within a bracket
-					input logic [9:0] clamp_vaccine_collision,
+					input logic	[0:9] [10:0] offsetX,// offset from top left  position 
+					input logic	[0:9] [10:0] offsetY, 
+					input	logic	[0:9] InsideRectangle, //input that the pixel is within a bracket
+					input logic [0:9] clamp_vaccine_collision,
  
-					output	logic	[9:0] drawingRequest, //output that the pixel should be dispalyed 
-					output	logic	[9:0] [7:0] RGBout,  //rgb value from the bitmap 
+					output	logic	[0:9] drawingRequest, //output that the pixel should be dispalyed 
+					output	logic	[0:9] [7:0] RGBout,  //rgb value from the bitmap 
 					output	logic	[9:0] [3:0] HitEdgeCode //one bit per edge 
  ) ; 
  
@@ -100,7 +100,7 @@ logic[0:63][0:63][7:0] object_colors = {
 			16'h9113}; 
  // pipeline (ff) to get the pixel color from the array 	 
 //////////--------------------------------------------------------------------------------------------------------------= 
-logic [9:0] draw_vaccine;
+logic [0:9] draw_vaccine;
 assign draw_vaccine = (InsideRectangle & clamp_vaccine_collision);
 always_ff@(posedge clk or negedge resetN) 
 begin 

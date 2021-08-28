@@ -20,6 +20,9 @@ module	smileyface_moveCollision	(
 					output	 logic signed	[10:0]	topLeftY,  // can be negative , if the object is partliy outside
 					output logic [5:0] circularState,
 					
+					
+					//output logic [3:0] circularState
+					output	 logic IsInCircular,
 					//DEBUG
 					output logic signed [10:0] DEBUG1,
 					output logic signed [10:0] DEBUG2
@@ -109,6 +112,7 @@ begin
 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;  
    circularState[5:0] = circular_ps[5:0];
+   IsInCircular =  isInStartingLocation;
 	
 end
 
