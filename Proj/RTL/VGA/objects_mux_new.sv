@@ -14,9 +14,7 @@ module	objects_mux_new	(
 		   // smiley 
 					input		logic	smileyDrawingRequest, // two set of inputs per unit
 					input		logic	[7:0] smileyRGB, 
-					     
-		  // line
-				//	input		logic	lineDR,			  
+			  
 		  // add the box here 
 					input		logic [9:0]	vaccineDrawingRequest, // two set of inputs per unit
 					input		logic	[9:0][7:0] vaccineRGB, 			  
@@ -26,6 +24,9 @@ module	objects_mux_new	(
 					input    logic HartDrawingRequest, // box of numbers
 					input		logic	[7:0] hartRGB,   
 					input		logic	[7:0] backGroundRGB, 
+					
+			// line
+					input		logic	lineDR,
 			  
 				   output	logic	[7:0] RGBOut
 );
@@ -52,7 +53,7 @@ begin
 		else if (vaccineDrawingRequest[7] == 1'b1 )  RGBOut <= vaccineRGB[7];  //second priority 
 		else if (vaccineDrawingRequest[8] == 1'b1 )  RGBOut <= vaccineRGB[8];  //second priority 
 		else if (vaccineDrawingRequest[9] == 1'b1 )  RGBOut <= vaccineRGB[9];  //second priority 
-		 
+		else if(lineDR) RGBOut <= 8'h080808;
 		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 
 		end ; 

@@ -17,8 +17,12 @@ module	smileyface_moveCollision	(
 					//input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside
-					//output logic [3:0] circularState
+					output	 logic signed	[10:0]	topLeftY,  // can be negative , if the object is partliy outside
+					output logic [5:0] circularState,
+					
+					//DEBUG
+					output logic signed [10:0] DEBUG1,
+					output logic signed [10:0] DEBUG2
 );
 
 
@@ -36,7 +40,7 @@ localparam int STRAIGHT = 1;
 localparam int RIGHT = 0;
 localparam int LEFT = 1;
 //localparam int MAX_STATE = 159;
-localparam int MAX_STATE = 51;
+localparam int MAX_STATE = 50;
 logic movement_type; // 0 for circular movement, 1 for straight movement.
 logic circular_direction; // 0 for right, 1 for left.
 /*
@@ -76,8 +80,8 @@ logic signed [MAX_STATE:0] [10:0] initial_speedsX = {
 
 
 logic[5:0] frame_counter;
-logic [7:0] circular_ps;
-logic [7:0] circular_ns;
+logic [5:0] circular_ps;
+logic [5:0] circular_ns;
 logic isInStartingLocation;
 logic collisionFlag;// 1 if collision happend, 0 else
 
@@ -100,12 +104,12 @@ logic signed [10:0] Xspeed, Yspeed, TLX,TLY ;
 
 always_comb
 begin
-	isInStartingLocation = (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
+	//isInStartingLocation = (topLeftX == DEBUG1) && (topLeftY == DEBUG2);
 	//get a better (64 times) resolution using integer   
 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;  
-	TLX = initial_positionsX[circular_ps] + INITIAL_X;
-TLY = (initial_positionsY[circular_ps] + INITIAL_Y);
+   circularState[5:0] = circular_ps[5:0];
+	
 end
 
 
@@ -116,7 +120,10 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	Yspeed <= Yspeed ; 
 	Xspeed <= Xspeed ; 
-	
+	isInStartingLocation <= (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
+		//DEBUG
+	DEBUG1 <= (initial_positionsX[circular_ps] + INITIAL_X);
+	DEBUG2 <= (initial_positionsY[circular_ps] + INITIAL_Y);
 	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
@@ -188,7 +195,7 @@ begin
 					else circular_ns <= circular_ps - 1;
 			end
 		end
-
+//
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
@@ -208,9 +215,7 @@ begin
 					topLeftX_FixedPoint  <= initial_positionsX[circular_ps] + INITIAL_X; // position interpolation 
 				end
 		end
-		
-		/////// debug /////
-		//if(TLX + TLY == -200) frame_counter = 1;
+
 		
 	end
 end 
