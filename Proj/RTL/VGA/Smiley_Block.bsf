@@ -101,6 +101,20 @@ agreement for further details.
 		(text "circular_movement" (rect 114 59 227 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 248 64)(pt 232 64))
 	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "TLY[10..0]" (rect 0 0 62 19)(font "Intel Clear" (font_size 8)))
+		(text "TLY[10..0]" (rect 165 75 227 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "circularState[5..0]" (rect 0 0 105 19)(font "Intel Clear" (font_size 8)))
+		(text "circularState[5..0]" (rect 122 91 227 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
 	(parameter
 		"initial_x"
 		"280"

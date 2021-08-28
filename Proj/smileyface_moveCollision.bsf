@@ -81,11 +81,25 @@ agreement for further details.
 		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(port
-		(pt 216 64)
+		(pt 224 80)
 		(output)
 		(text "IsInCircular" (rect 0 0 44 12)(font "Arial" ))
-		(text "IsInCircular" (rect 151 59 195 71)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 1))
+		(text "IsInCircular" (rect 159 75 203 87)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80)(line_width 1))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "DEBUG1[10..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "DEBUG1[10..0]" (rect 142 91 203 103)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96)(line_width 3))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "DEBUG2[10..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "DEBUG2[10..0]" (rect 141 107 203 119)(font "Arial" ))
+		(line (pt 224 112)(pt 208 112)(line_width 3))
 	)
 	(parameter
 		"INITIAL_X"

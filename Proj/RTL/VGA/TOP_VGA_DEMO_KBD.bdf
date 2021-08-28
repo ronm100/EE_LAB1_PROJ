@@ -701,112 +701,6 @@ agreement for further details.
 	(annotation_block (parameter)(rect -176 1256 -6 1332))
 )
 (symbol
-	(rect 576 152 824 344)
-	(text "Smiley_Block" (rect 5 0 85 19)(font "Intel Clear" (font_size 8)))
-	(text "inst1" (rect 8 171 30 188)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
-		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "Y_direction" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
-		(text "Y_direction" (rect 21 107 88 126)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "toggleX" (rect 0 0 44 19)(font "Intel Clear" (font_size 8)))
-		(text "toggleX" (rect 21 123 65 142)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "collision" (rect 21 139 68 158)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 248 32)
-		(output)
-		(text "smileyDR" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
-		(text "smileyDR" (rect 171 27 227 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 248 32)(pt 232 32))
-	)
-	(port
-		(pt 248 48)
-		(output)
-		(text "smileyRGB[7..0]" (rect 0 0 95 19)(font "Intel Clear" (font_size 8)))
-		(text "smileyRGB[7..0]" (rect 132 43 227 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 248 48)(pt 232 48)(line_width 3))
-	)
-	(port
-		(pt 248 64)
-		(output)
-		(text "circular_movement" (rect 0 0 113 19)(font "Intel Clear" (font_size 8)))
-		(text "circular_movement" (rect 114 59 227 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 248 64)(pt 232 64))
-	)
-	(parameter
-		"initial_x"
-		"288"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y"
-		"64"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_x_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 232 176))
-	)
-	(annotation_block (parameter)(rect 592 40 786 135))
-)
-(symbol
 	(rect -376 1656 -160 1768)
 	(text "random" (rect 5 0 41 12)(font "Arial" ))
 	(text "inst7" (rect 8 96 31 108)(font "Arial" ))
@@ -1184,131 +1078,39 @@ agreement for further details.
 		(pt 336 32)
 		(output)
 		(text "collision_clamp_vaccine[0..3]" (rect 0 0 145 12)(font "Arial" ))
-		(text "collision_clamp_vaccine[0..3]" (rect 193 27 315 39)(font "Arial" ))
+		(text "collision_clamp_vaccine[0..3]" (rect 193 27 338 39)(font "Arial" ))
 		(line (pt 336 32)(pt 320 32)(line_width 3))
 	)
 	(port
 		(pt 336 48)
 		(output)
 		(text "collision" (rect 0 0 38 12)(font "Arial" ))
-		(text "collision" (rect 283 43 315 55)(font "Arial" ))
+		(text "collision" (rect 283 43 321 55)(font "Arial" ))
 		(line (pt 336 48)(pt 320 48))
 	)
 	(port
 		(pt 336 64)
 		(output)
 		(text "SingleHitPulse" (rect 0 0 70 12)(font "Arial" ))
-		(text "SingleHitPulse" (rect 256 59 315 71)(font "Arial" ))
+		(text "SingleHitPulse" (rect 256 59 326 71)(font "Arial" ))
 		(line (pt 336 64)(pt 320 64))
 	)
 	(port
 		(pt 336 80)
 		(output)
 		(text "collision_clamp_corona[0..3]" (rect 0 0 139 12)(font "Arial" ))
-		(text "collision_clamp_corona[0..3]" (rect 198 75 315 87)(font "Arial" ))
+		(text "collision_clamp_corona[0..3]" (rect 198 75 337 87)(font "Arial" ))
 		(line (pt 336 80)(pt 320 80)(line_width 3))
 	)
 	(port
 		(pt 336 96)
 		(output)
 		(text "EndOfPhase1" (rect 0 0 68 12)(font "Arial" ))
-		(text "EndOfPhase1" (rect 258 91 315 103)(font "Arial" ))
+		(text "EndOfPhase1" (rect 258 91 326 103)(font "Arial" ))
 		(line (pt 336 96)(pt 320 96))
 	)
 	(drawing
 		(rectangle (rect 16 16 320 160))
-	)
-)
-(symbol
-	(rect 544 376 816 616)
-	(text "objects_mux_new" (rect 5 0 92 12)(font "Arial" ))
-	(text "inst8" (rect 8 224 31 236)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
-		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "smileyDrawingRequest" (rect 0 0 113 12)(font "Arial" ))
-		(text "smileyDrawingRequest" (rect 21 59 134 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "smileyRGB[7..0]" (rect 0 0 82 12)(font "Arial" ))
-		(text "smileyRGB[7..0]" (rect 21 75 103 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "vaccineDrawingRequest[0..9]" (rect 0 0 145 12)(font "Arial" ))
-		(text "vaccineDrawingRequest[0..9]" (rect 21 91 166 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "vaccineRGB[0..9][7..0]" (rect 0 0 114 12)(font "Arial" ))
-		(text "vaccineRGB[0..9][7..0]" (rect 21 107 135 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "HartDrawingRequest" (rect 0 0 101 12)(font "Arial" ))
-		(text "HartDrawingRequest" (rect 21 123 122 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "hartRGB[7..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "hartRGB[7..0]" (rect 21 139 89 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "backGroundRGB[7..0]" (rect 0 0 108 12)(font "Arial" ))
-		(text "backGroundRGB[7..0]" (rect 21 155 129 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "coronaDrawingRequest[0..9]" (rect 0 0 139 12)(font "Arial" ))
-		(text "coronaDrawingRequest[0..9]" (rect 21 171 160 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 3))
-	)
-	(port
-		(pt 0 192)
-		(input)
-		(text "coronaRGB[0..9][7..0]" (rect 0 0 108 12)(font "Arial" ))
-		(text "coronaRGB[0..9][7..0]" (rect 21 187 129 199)(font "Arial" ))
-		(line (pt 0 192)(pt 16 192)(line_width 3))
-	)
-	(port
-		(pt 272 32)
-		(output)
-		(text "RGBOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "RGBOut[7..0]" (rect 195 27 251 39)(font "Arial" ))
-		(line (pt 272 32)(pt 256 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 256 224))
 	)
 )
 (symbol
@@ -1415,6 +1217,293 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 344 208))
+	)
+)
+(symbol
+	(rect 928 1632 1152 1776)
+	(text "Line" (rect 5 0 25 12)(font "Arial" ))
+	(text "inst13" (rect 8 128 36 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "pixelX[10..0]" (rect 21 59 81 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "pixelY[10..0]" (rect 21 75 83 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clamp_topLeftY[10..0]" (rect 0 0 110 12)(font "Arial" ))
+		(text "clamp_topLeftY[10..0]" (rect 21 91 131 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "circular_ps[5..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "circular_ps[5..0]" (rect 21 107 100 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "line_DR" (rect 0 0 38 12)(font "Arial" ))
+		(text "line_DR" (rect 171 27 209 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32))
+	)
+	(parameter
+		"INITIAL_X"
+		"288"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"INITIAL_Y"
+		"64"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+	(annotation_block (parameter)(rect 1152 1568 1328 1632))
+)
+(symbol
+	(rect 576 152 824 344)
+	(text "Smiley_Block" (rect 5 0 85 19)(font "Intel Clear" (font_size 8)))
+	(text "inst1" (rect 8 171 30 188)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Y_direction" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "Y_direction" (rect 21 107 88 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "toggleX" (rect 0 0 44 19)(font "Intel Clear" (font_size 8)))
+		(text "toggleX" (rect 21 123 65 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 139 68 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "smileyDR" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "smileyDR" (rect 171 27 227 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 32)(pt 232 32))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "smileyRGB[7..0]" (rect 0 0 95 19)(font "Intel Clear" (font_size 8)))
+		(text "smileyRGB[7..0]" (rect 132 43 227 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "circular_movement" (rect 0 0 113 19)(font "Intel Clear" (font_size 8)))
+		(text "circular_movement" (rect 114 59 227 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 64)(pt 232 64))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "TLY[10..0]" (rect 0 0 62 19)(font "Intel Clear" (font_size 8)))
+		(text "TLY[10..0]" (rect 165 75 227 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "circularState[5..0]" (rect 0 0 105 19)(font "Intel Clear" (font_size 8)))
+		(text "circularState[5..0]" (rect 122 91 227 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(parameter
+		"initial_x"
+		"288"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"64"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 232 176))
+	)
+	(annotation_block (parameter)(rect 592 40 786 135))
+)
+(symbol
+	(rect 544 376 816 616)
+	(text "objects_mux_new" (rect 5 0 92 12)(font "Arial" ))
+	(text "inst8" (rect 8 224 31 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "smileyDrawingRequest" (rect 0 0 113 12)(font "Arial" ))
+		(text "smileyDrawingRequest" (rect 21 59 134 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "smileyRGB[7..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "smileyRGB[7..0]" (rect 21 75 103 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "vaccineDrawingRequest[0..9]" (rect 0 0 145 12)(font "Arial" ))
+		(text "vaccineDrawingRequest[0..9]" (rect 21 91 166 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "vaccineRGB[0..9][7..0]" (rect 0 0 114 12)(font "Arial" ))
+		(text "vaccineRGB[0..9][7..0]" (rect 21 107 135 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "HartDrawingRequest" (rect 0 0 101 12)(font "Arial" ))
+		(text "HartDrawingRequest" (rect 21 123 122 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "hartRGB[7..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "hartRGB[7..0]" (rect 21 139 89 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "backGroundRGB[7..0]" (rect 0 0 108 12)(font "Arial" ))
+		(text "backGroundRGB[7..0]" (rect 21 155 129 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "coronaDrawingRequest[0..9]" (rect 0 0 139 12)(font "Arial" ))
+		(text "coronaDrawingRequest[0..9]" (rect 21 171 160 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "coronaRGB[0..9][7..0]" (rect 0 0 108 12)(font "Arial" ))
+		(text "coronaRGB[0..9][7..0]" (rect 21 187 129 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "lineDR" (rect 0 0 33 12)(font "Arial" ))
+		(text "lineDR" (rect 21 203 54 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 272 32)
+		(output)
+		(text "RGBOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "RGBOut[7..0]" (rect 195 27 251 39)(font "Arial" ))
+		(line (pt 272 32)(pt 256 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 256 224))
 	)
 )
 (connector
@@ -1573,7 +1662,6 @@ agreement for further details.
 	(pt 424 504)
 )
 (connector
-	(text "<<__$DEF_ALIAS126>>" (rect 387 248 499 265)(font "Intel Clear" )(invisible))
 	(pt 576 264)
 	(pt 368 264)
 )
@@ -1589,26 +1677,6 @@ agreement for further details.
 	(text "toggleX" (rect 386 264 423 281)(font "Intel Clear" ))
 	(pt 368 280)
 	(pt 576 280)
-)
-(connector
-	(pt 808 184)
-	(pt 824 184)
-)
-(connector
-	(text "smileyDR" (rect 810 168 856 185)(font "Intel Clear" ))
-	(pt 824 184)
-	(pt 888 184)
-)
-(connector
-	(pt 808 200)
-	(pt 824 200)
-	(bus)
-)
-(connector
-	(text "smileyRGB[7..0]" (rect 810 184 886 201)(font "Intel Clear" ))
-	(pt 824 200)
-	(pt 944 200)
-	(bus)
 )
 (connector
 	(text "circular_movement" (rect 824 200 916 217)(font "Intel Clear" ))
@@ -2146,6 +2214,82 @@ agreement for further details.
 	(pt 656 2096)
 	(pt 776 2096)
 	(bus)
+)
+(connector
+	(pt 808 184)
+	(pt 824 184)
+)
+(connector
+	(text "smileyDR" (rect 810 168 856 185)(font "Intel Clear" ))
+	(pt 824 184)
+	(pt 888 184)
+)
+(connector
+	(pt 808 200)
+	(pt 824 200)
+	(bus)
+)
+(connector
+	(text "smileyRGB[7..0]" (rect 810 184 886 201)(font "Intel Clear" ))
+	(pt 824 200)
+	(pt 944 200)
+	(bus)
+)
+(connector
+	(text "clampTLY[10..0]" (rect 834 216 911 233)(font "Intel Clear" ))
+	(pt 824 232)
+	(pt 904 232)
+	(bus)
+)
+(connector
+	(text "circularState[5..0]" (rect 834 232 916 249)(font "Intel Clear" ))
+	(pt 824 248)
+	(pt 904 248)
+	(bus)
+)
+(connector
+	(text "circularState[5..0]" (rect 858 1728 940 1745)(font "Intel Clear" ))
+	(pt 848 1744)
+	(pt 928 1744)
+	(bus)
+)
+(connector
+	(text "clampTLY[10..0]" (rect 858 1712 935 1729)(font "Intel Clear" ))
+	(pt 848 1728)
+	(pt 928 1728)
+	(bus)
+)
+(connector
+	(text "pixelX[10..0]" (rect 810 1680 870 1692)(font "Arial" ))
+	(pt 744 1696)
+	(pt 928 1696)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect 866 1696 928 1708)(font "Arial" ))
+	(pt 928 1712)
+	(pt 800 1712)
+	(bus)
+)
+(connector
+	(text "clk" (rect 858 1648 872 1665)(font "Intel Clear" ))
+	(pt 928 1664)
+	(pt 856 1664)
+)
+(connector
+	(text "resetN" (rect 850 1664 880 1681)(font "Intel Clear" ))
+	(pt 928 1680)
+	(pt 848 1680)
+)
+(connector
+	(text "lineDR" (rect 1162 1648 1193 1665)(font "Intel Clear" ))
+	(pt 1152 1664)
+	(pt 1232 1664)
+)
+(connector
+	(text "lineDR" (rect 474 568 505 585)(font "Intel Clear" ))
+	(pt 464 584)
+	(pt 544 584)
 )
 (junction (pt 368 280))
 (junction (pt 824 184))

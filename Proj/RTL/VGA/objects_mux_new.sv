@@ -24,11 +24,13 @@ module	objects_mux_new	(
 					input    logic HartDrawingRequest, // box of numbers
 					input		logic	[7:0] hartRGB,    
 					
-			// line
-					input		logic	lineDR,
+
 					input		logic	[7:0] backGroundRGB,
 					input		logic [0:9] coronaDrawingRequest,
 					input		logic [0:9][7:0] coronaRGB,
+					
+					// line
+					input		logic	lineDR,
 			  
 				   output	logic	[7:0] RGBOut
 );
