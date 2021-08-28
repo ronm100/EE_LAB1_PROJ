@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 352 160)
+	(rect 16 16 352 192)
 	(text "game_controller_all" (rect 5 0 81 12)(font "Arial" ))
-	(text "inst" (rect 8 128 20 140)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -67,6 +67,20 @@ agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "drawing_request_corona[0..9]" (rect 0 0 118 12)(font "Arial" ))
+		(text "drawing_request_corona[0..9]" (rect 21 123 139 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "current_vaccines[0..9]" (rect 0 0 89 12)(font "Arial" ))
+		(text "current_vaccines[0..9]" (rect 21 139 110 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
 		(pt 336 32)
 		(output)
 		(text "collision_clamp_vaccine[0..3]" (rect 0 0 114 12)(font "Arial" ))
@@ -87,7 +101,21 @@ agreement for further details.
 		(text "SingleHitPulse" (rect 261 59 315 71)(font "Arial" ))
 		(line (pt 336 64)(pt 320 64)(line_width 1))
 	)
+	(port
+		(pt 336 80)
+		(output)
+		(text "collision_clamp_corona[0..3]" (rect 0 0 110 12)(font "Arial" ))
+		(text "collision_clamp_corona[0..3]" (rect 205 75 315 87)(font "Arial" ))
+		(line (pt 336 80)(pt 320 80)(line_width 3))
+	)
+	(port
+		(pt 336 96)
+		(output)
+		(text "EndOfPhase1" (rect 0 0 55 12)(font "Arial" ))
+		(text "EndOfPhase1" (rect 260 91 315 103)(font "Arial" ))
+		(line (pt 336 96)(pt 320 96)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 320 128)(line_width 1))
+		(rectangle (rect 16 16 320 160)(line_width 1))
 	)
 )

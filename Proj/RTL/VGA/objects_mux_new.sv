@@ -18,14 +18,16 @@ module	objects_mux_new	(
 		  // line
 				//	input		logic	lineDR,			  
 		  // add the box here 
-					input		logic [9:0]	vaccineDrawingRequest, // two set of inputs per unit
-					input		logic	[9:0][7:0] vaccineRGB, 			  
+					input		logic [0:9]	vaccineDrawingRequest, // two set of inputs per unit
+					input		logic	[0:9][7:0] vaccineRGB,
 			  
 		  ////////////////////////
 		  // background 
 					input    logic HartDrawingRequest, // box of numbers
 					input		logic	[7:0] hartRGB,   
-					input		logic	[7:0] backGroundRGB, 
+					input		logic	[7:0] backGroundRGB,
+					input		logic [0:9] coronaDrawingRequest,
+					input		logic [0:9][7:0] coronaRGB,
 			  
 				   output	logic	[7:0] RGBOut
 );
@@ -41,7 +43,19 @@ begin
 			RGBOut <= smileyRGB;  //first priority 
 		 
 		 
-		 // add logic for box here 
+		 // add logic for box here
+		else if (coronaDrawingRequest[0] == 1'b1 )  RGBOut <= coronaRGB[0];  //second priority 
+		else if (coronaDrawingRequest[1] == 1'b1 )  RGBOut <= coronaRGB[1];  //second priority 
+		else if (coronaDrawingRequest[2] == 1'b1 )  RGBOut <= coronaRGB[2];  //second priority 
+		else if (coronaDrawingRequest[3] == 1'b1 )  RGBOut <= coronaRGB[3];  //second priority 
+		else if (coronaDrawingRequest[4] == 1'b1 )  RGBOut <= coronaRGB[4];  //second priority 
+		else if (coronaDrawingRequest[5] == 1'b1 )  RGBOut <= coronaRGB[5];  //second priority 
+		else if (coronaDrawingRequest[6] == 1'b1 )  RGBOut <= coronaRGB[6];  //second priority 
+		else if (coronaDrawingRequest[7] == 1'b1 )  RGBOut <= coronaRGB[7];  //second priority 
+		else if (coronaDrawingRequest[8] == 1'b1 )  RGBOut <= coronaRGB[8];  //second priority 
+		else if (coronaDrawingRequest[9] == 1'b1 )  RGBOut <= coronaRGB[9];  //second priority
+		
+		
 		else if (vaccineDrawingRequest[0] == 1'b1 )  RGBOut <= vaccineRGB[0];  //second priority 
 		else if (vaccineDrawingRequest[1] == 1'b1 )  RGBOut <= vaccineRGB[1];  //second priority 
 		else if (vaccineDrawingRequest[2] == 1'b1 )  RGBOut <= vaccineRGB[2];  //second priority 

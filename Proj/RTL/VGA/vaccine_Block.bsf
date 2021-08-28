@@ -97,15 +97,15 @@ agreement for further details.
 	(port
 		(pt 368 32)
 		(output)
-		(text "drawingRequest[9..0]" (rect 0 0 126 19)(font "Intel Clear" (font_size 8)))
-		(text "drawingRequest[9..0]" (rect 221 27 347 46)(font "Intel Clear" (font_size 8)))
+		(text "drawingRequest[0..9]" (rect 0 0 126 19)(font "Intel Clear" (font_size 8)))
+		(text "drawingRequest[0..9]" (rect 221 27 347 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 368 32)(pt 352 32)(line_width 3))
 	)
 	(port
 		(pt 368 48)
 		(output)
-		(text "RGBout[9..0][7..0]" (rect 0 0 106 19)(font "Intel Clear" (font_size 8)))
-		(text "RGBout[9..0][7..0]" (rect 241 43 347 62)(font "Intel Clear" (font_size 8)))
+		(text "RGBout[0..9][7..0]" (rect 0 0 106 19)(font "Intel Clear" (font_size 8)))
+		(text "RGBout[0..9][7..0]" (rect 241 43 347 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 368 48)(pt 352 48)(line_width 3))
 	)
 	(port
@@ -114,6 +114,13 @@ agreement for further details.
 		(text "HitEdgeCode[9..0][3..0]" (rect 0 0 139 19)(font "Intel Clear" (font_size 8)))
 		(text "HitEdgeCode[9..0][3..0]" (rect 208 59 347 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 368 64)(pt 352 64)(line_width 3))
+	)
+	(port
+		(pt 368 80)
+		(output)
+		(text "current_vaccines[0..9]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "current_vaccines[0..9]" (rect 219 75 347 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 80)(pt 352 80)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 352 208))

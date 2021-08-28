@@ -38,11 +38,11 @@ logic signed [0:9] [10:0] INITIAL_Y = {11'd200,11'd320,11'd160,11'd200,11'd410,1
 //const int  Y_ACCEL = -1;
 //logic movement_type; // 0 for circular movement, 1 for straight movement.
 //logic circular_direction; // 0 for right, 1 for left.
-logic [3:0] position_number = 0;
+//logic [3:0] position_number = 0;
 logic [0:9] [10:0] X_positions = {11'd70,11'd80,11'd140,11'd200,11'd170,11'd330,11'd370,11'd480,11'd440,11'd550};
 logic [0:9] [10:0] Y_positions = {11'd200,11'd320,11'd160,11'd200,11'd410,11'd330,11'd170,11'd380,11'd180,11'd180};
 logic [0:9] draw_request = 10'h3da;
-logic [3:0] rand_index = 0;
+logic [0:3] rand_index = 0;
 logic [0:9] [10:0] X_rand_positions = {11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0};
 logic [0:9] [10:0] Y_rand_positions = {11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0, 11'd0};
 
