@@ -33,6 +33,17 @@ localparam  int RED_LEFT_X  = 256 ;
 localparam  int GREEN_RIGHT_X  = 32 ;
 localparam  int BLUE_BOTTOM_Y  = 300 ;
 localparam  int BLUE_RIGHT_X  = 200 ;
+
+//mask parameters
+localparam 	int MASK_UPPER_Y = 110;
+localparam	int MASK_BOTTOM_Y = 360;
+localparam	int TOP_WHITE_BOTTOM_Y = 130;
+localparam	int BOTTOM_WHITE_TOP_Y = 345;
+localparam	int PLEATS_LEFT_X = 95;
+localparam	int PLEATS_RIGHT_X = 550;
+localparam	int FIRST_PLEAT_TOP_Y = 170;
+localparam	int SECOND_PLEAT_TOP_Y = 220;
+localparam	int THIRD_PLEAT_TOP_Y = 270;
  
 parameter  logic [10:0] COLOR_MATRIX_TOP_Y  = 100 ; 
 parameter  logic [10:0] COLOR_MATRIX_LEFT_X = 100 ;
@@ -59,9 +70,9 @@ begin
 	else begin
 
 	// defaults 
-		greenBits <= 3'b110 ; 
-		redBits <= 3'b010 ;
-		blueBits <= LIGHT_COLOR;
+		greenBits <= 3'b101 ; 
+		redBits <= 3'b111 ;
+		blueBits <= 2'b10;
 		boardersDrawReq <= 	1'b0 ; 
 
 					
@@ -92,15 +103,46 @@ begin
 	// 3.  draw red rectangle at the bottom right,  green on the left, and blue on top left 
 	//-------------------------------------------------------------------------------------
 		
-		if (pixelY > RED_TOP_Y && pixelX >= RED_LEFT_X ) // rectangles on part of the screen 
-				redBits <= DARK_COLOR ; 
-				 
-	
-		if (GREEN_RIGHT_X <  GREEN_RIGHT_X  ) 
-				greenBits <= 3'b011 ; 
-						
-		if (pixelX <  BLUE_RIGHT_X && pixelY < BLUE_BOTTOM_Y )   
-					blueBits <= 2'b10  ; 
+//		if (pixelY > RED_TOP_Y && pixelX >= RED_LEFT_X ) // rectangles on part of the screen 
+//				redBits <= DARK_COLOR ; 
+//				 
+//	
+//		if (GREEN_RIGHT_X <  GREEN_RIGHT_X  ) 
+//				greenBits <= 3'b011 ; 
+//						
+//		if (pixelX <  BLUE_RIGHT_X && pixelY < BLUE_BOTTOM_Y )   
+//					blueBits <= 2'b10  ; 
+
+//add mask
+		if (((pixelY > MASK_UPPER_Y) && (pixelY < TOP_WHITE_BOTTOM_Y)) || ((pixelY > BOTTOM_WHITE_TOP_Y) && (pixelY < MASK_BOTTOM_Y))) begin
+			redBits <= DARK_COLOR;
+			greenBits <= DARK_COLOR;
+			blueBits <= 2'b11;
+		end
+		
+		if ((pixelY >= TOP_WHITE_BOTTOM_Y) && (pixelY <= BOTTOM_WHITE_TOP_Y)) begin
+			redBits <= 3'b110;
+			greenBits <= 3'b110;
+			blueBits <= 2'b11;
+		end
+		
+		if (((pixelY > FIRST_PLEAT_TOP_Y) && (pixelY < FIRST_PLEAT_TOP_Y +5)) && ((pixelX > PLEATS_LEFT_X) && (pixelX < PLEATS_RIGHT_X))) begin
+			redBits <= 3'b000;
+			greenBits <= 3'b000;
+			blueBits <= 2'b11;
+		end
+		
+		if (((pixelY > SECOND_PLEAT_TOP_Y) && (pixelY < SECOND_PLEAT_TOP_Y +5)) && ((pixelX > PLEATS_LEFT_X) && (pixelX < PLEATS_RIGHT_X))) begin
+			redBits <= 3'b000;
+			greenBits <= 3'b000;
+			blueBits <= 2'b11;
+		end
+		
+		if (((pixelY > THIRD_PLEAT_TOP_Y) && (pixelY < THIRD_PLEAT_TOP_Y +5)) && ((pixelX > PLEATS_LEFT_X) && (pixelX < PLEATS_RIGHT_X))) begin
+			redBits <= 3'b000;
+			greenBits <= 3'b000;
+			blueBits <= 2'b11;
+		end
 
 				
 

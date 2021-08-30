@@ -31,6 +31,10 @@ module	objects_mux_new	(
 					
 					// line
 					input		logic	lineDR,
+					
+					// benet
+					input		logic BenetDR,
+					input		logic [7:0] BenetRGB,
 			  
 				   output	logic	[7:0] RGBOut
 );
@@ -69,6 +73,7 @@ begin
 		else if (vaccineDrawingRequest[7] == 1'b1 )  RGBOut <= vaccineRGB[7];  //second priority 
 		else if (vaccineDrawingRequest[8] == 1'b1 )  RGBOut <= vaccineRGB[8];  //second priority 
 		else if (vaccineDrawingRequest[9] == 1'b1 )  RGBOut <= vaccineRGB[9];  //second priority 
+		else if (BenetDR) RGBOut <= BenetRGB;
 		else if(lineDR) RGBOut <= 8'h080808;
 		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 

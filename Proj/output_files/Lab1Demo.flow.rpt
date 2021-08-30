@@ -1,5 +1,5 @@
 Flow report for Lab1Demo
-Sat Aug 28 19:53:12 2021
+Mon Aug 30 16:57:20 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Aug 28 19:52:14 2021       ;
+; Flow Status                     ; Successful - Mon Aug 30 16:56:27 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 6,152 / 41,910 ( 15 % )                     ;
-; Total registers                 ; 3772                                        ;
+; Logic utilization (in ALMs)     ; 6,618 / 41,910 ( 16 % )                     ;
+; Total registers                 ; 3895                                        ;
 ; Total pins                      ; 58 / 499 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,097,856 / 5,662,720 ( 19 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/28/2021 19:44:37 ;
+; Start date & time ; 08/30/2021 16:49:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab1Demo            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+--------------------------------------------------------------------------+---------------+------------------+------------------+
 ; Assignment Name                     ; Value                                                                    ; Default Value ; Entity Name      ; Section Id       ;
 +-------------------------------------+--------------------------------------------------------------------------+---------------+------------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589193.163016907719384                                           ; --            ; --               ; --               ;
+; COMPILER_SIGNATURE_ID               ; 93383145738141.163033134713800                                           ; --            ; --               ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                       ; --            ; --               ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                       ; --            ; --               ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                        ; --            ; --               ; --               ;
@@ -100,6 +100,10 @@ agreement for further details.
 ; MISC_FILE                           ; Number_position_bb.v                                                     ; --            ; --               ; --               ;
 ; MISC_FILE                           ; matrix_top_XY.bsf                                                        ; --            ; --               ; --               ;
 ; MISC_FILE                           ; matrix_top_XY_bb.v                                                       ; --            ; --               ; --               ;
+; MISC_FILE                           ; RTL/BenetTopLeftX.bsf                                                    ; --            ; --               ; --               ;
+; MISC_FILE                           ; RTL/BenetTopLeftX_bb.v                                                   ; --            ; --               ; --               ;
+; MISC_FILE                           ; RTL/BenetTopLeftY.bsf                                                    ; --            ; --               ; --               ;
+; MISC_FILE                           ; RTL/BenetTopLeftY_bb.v                                                   ; --            ; --               ; --               ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                                                      ; --            ; --               ; --               ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                   ; --            ; TOP_VGA_DEMO_KBD ; Top              ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                   ; --            ; TOP_VGA_DEMO_KBD ; Top              ;
@@ -148,11 +152,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:42     ; 1.0                     ; 5032 MB             ; 00:03:13                           ;
-; Fitter                    ; 00:04:15     ; 1.3                     ; 6721 MB             ; 00:11:01                           ;
-; Assembler                 ; 00:00:22     ; 1.0                     ; 4939 MB             ; 00:00:22                           ;
-; TimeQuest Timing Analyzer ; 00:00:56     ; 2.0                     ; 5375 MB             ; 00:01:45                           ;
-; Total                     ; 00:08:15     ; --                      ; --                  ; 00:16:21                           ;
+; Analysis & Synthesis      ; 00:01:53     ; 1.0                     ; 5037 MB             ; 00:02:27                           ;
+; Fitter                    ; 00:05:00     ; 1.1                     ; 6451 MB             ; 00:09:53                           ;
+; Assembler                 ; 00:00:17     ; 1.0                     ; 4937 MB             ; 00:00:17                           ;
+; TimeQuest Timing Analyzer ; 00:00:52     ; 1.5                     ; 5333 MB             ; 00:01:14                           ;
+; Total                     ; 00:08:02     ; --                      ; --                  ; 00:13:51                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -161,10 +165,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-GDS9N5F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-GDS9N5F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-GDS9N5F  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-GDS9N5F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Lenovo-Ganit     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Lenovo-Ganit     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; Lenovo-Ganit     ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Lenovo-Ganit     ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

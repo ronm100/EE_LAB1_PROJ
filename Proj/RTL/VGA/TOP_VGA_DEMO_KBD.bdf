@@ -135,7 +135,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 32 720 208 736)
+	(rect 32 528 208 544)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "BG_RGB[7..0]" (rect 90 0 154 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -151,7 +151,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 32 736 212 752)
+	(rect 32 544 212 560)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "boardersDrawReq" (rect 90 0 174 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -347,7 +347,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -304 696 -80 808)
+	(rect -304 504 -80 616)
 	(text "back_ground_draw" (rect 5 0 95 12)(font "Arial" ))
 	(text "inst4" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
@@ -405,7 +405,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect -328 616 -85 673))
+	(annotation_block (parameter)(rect -328 424 -85 481))
 )
 (symbol
 	(rect -24 216 176 344)
@@ -529,7 +529,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -288 864 -24 992)
+	(rect -288 672 -24 800)
 	(text "HART_DISPLAY" (rect 5 0 99 19)(font "Intel Clear" (font_size 8)))
 	(text "inst5" (rect 8 107 30 124)(font "Intel Clear" ))
 	(port
@@ -594,7 +594,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 248 112))
 	)
-	(annotation_block (parameter)(rect -24 800 152 864))
+	(annotation_block (parameter)(rect -24 608 152 672))
 )
 (symbol
 	(rect -384 1480 -168 1592)
@@ -1408,9 +1408,9 @@ agreement for further details.
 	(annotation_block (parameter)(rect 592 40 786 135))
 )
 (symbol
-	(rect 544 376 816 616)
+	(rect 544 376 816 648)
 	(text "objects_mux_new" (rect 5 0 92 12)(font "Arial" ))
-	(text "inst8" (rect 8 224 31 236)(font "Arial" ))
+	(text "inst8" (rect 8 256 31 268)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1496,6 +1496,20 @@ agreement for further details.
 		(line (pt 0 208)(pt 16 208))
 	)
 	(port
+		(pt 0 224)
+		(input)
+		(text "BenetDR" (rect 0 0 44 12)(font "Arial" ))
+		(text "BenetDR" (rect 21 219 65 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "BenetRGB[7..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "BenetRGB[7..0]" (rect 21 235 98 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
 		(pt 272 32)
 		(output)
 		(text "RGBOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
@@ -1503,8 +1517,69 @@ agreement for further details.
 		(line (pt 272 32)(pt 256 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 256 224))
+		(rectangle (rect 16 16 256 256))
 	)
+)
+(symbol
+	(rect -256 920 -40 1048)
+	(text "Benet_Block" (rect 5 0 78 19)(font "Intel Clear" (font_size 8)))
+	(text "inst14" (rect 8 107 36 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 27 37 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 43 59 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 59 96 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 75 96 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "BenetDR" (rect 0 0 51 19)(font "Intel Clear" (font_size 8)))
+		(text "BenetDR" (rect 144 27 195 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "BenetRGB[7..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "BenetRGB[7..0]" (rect 105 43 195 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(parameter
+		"topLeftX[10..0]"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"topLeftY[10..0]"
+		"64"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 112))
+	)
+	(annotation_block (parameter)(rect 16 824 216 888))
 )
 (connector
 	(pt 64 104)
@@ -1975,76 +2050,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "clk" (rect -329 712 -315 729)(font "Intel Clear" ))
-	(pt -336 728)
-	(pt -304 728)
-)
-(connector
-	(text "pixelX[10..0]" (rect -374 744 -314 756)(font "Arial" ))
-	(pt -400 760)
-	(pt -304 760)
-	(bus)
-)
-(connector
-	(text "pixelY[10..0]" (rect -374 760 -312 772)(font "Arial" ))
-	(pt -400 776)
-	(pt -304 776)
-	(bus)
-)
-(connector
-	(text "boardersDrawReq" (rect -70 728 14 745)(font "Intel Clear" ))
-	(pt -80 744)
-	(pt 32 744)
-)
-(connector
-	(text "resetN" (rect -384 728 -354 745)(font "Intel Clear" ))
-	(pt -304 744)
-	(pt -400 744)
-)
-(connector
-	(text "resetN" (rect -342 896 -312 913)(font "Intel Clear" ))
-	(pt -488 912)
-	(pt -288 912)
-)
-(connector
-	(text "pixelX[10..0]" (rect -350 912 -291 929)(font "Intel Clear" ))
-	(pt -488 928)
-	(pt -288 928)
-	(bus)
-)
-(connector
-	(text "pixelY[10..0]" (rect -350 928 -291 945)(font "Intel Clear" ))
-	(pt -488 944)
-	(pt -288 944)
-	(bus)
-)
-(connector
-	(text "HartDrawingRequest" (rect -14 880 83 897)(font "Intel Clear" ))
-	(pt -24 896)
-	(pt 96 896)
-)
-(connector
-	(text "hartRGB[7..0]" (rect -14 896 49 913)(font "Intel Clear" ))
-	(pt -24 912)
-	(pt 96 912)
-	(bus)
-)
-(connector
-	(text "hart_select" (rect -350 944 -297 961)(font "Intel Clear" ))
-	(pt -288 960)
-	(pt -488 960)
-)
-(connector
-	(text "clk" (rect -336 880 -322 897)(font "Intel Clear" ))
-	(pt -488 896)
-	(pt -288 896)
-)
-(connector
-	(pt -80 728)
-	(pt 32 728)
-	(bus)
-)
-(connector
 	(text "clk" (rect 448 704 462 721)(font "Intel Clear" ))
 	(pt 400 720)
 	(pt 520 720)
@@ -2291,6 +2296,120 @@ agreement for further details.
 	(pt 464 584)
 	(pt 544 584)
 )
+(connector
+	(text "clk" (rect -329 520 -315 537)(font "Intel Clear" ))
+	(pt -336 536)
+	(pt -304 536)
+)
+(connector
+	(text "pixelX[10..0]" (rect -374 552 -314 564)(font "Arial" ))
+	(pt -400 568)
+	(pt -304 568)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect -374 568 -312 580)(font "Arial" ))
+	(pt -400 584)
+	(pt -304 584)
+	(bus)
+)
+(connector
+	(text "boardersDrawReq" (rect -70 536 14 553)(font "Intel Clear" ))
+	(pt -80 552)
+	(pt 32 552)
+)
+(connector
+	(text "resetN" (rect -384 536 -354 553)(font "Intel Clear" ))
+	(pt -304 552)
+	(pt -400 552)
+)
+(connector
+	(text "resetN" (rect -342 704 -312 721)(font "Intel Clear" ))
+	(pt -488 720)
+	(pt -288 720)
+)
+(connector
+	(text "pixelX[10..0]" (rect -350 720 -291 737)(font "Intel Clear" ))
+	(pt -488 736)
+	(pt -288 736)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect -350 736 -291 753)(font "Intel Clear" ))
+	(pt -488 752)
+	(pt -288 752)
+	(bus)
+)
+(connector
+	(text "HartDrawingRequest" (rect -14 688 83 705)(font "Intel Clear" ))
+	(pt -24 704)
+	(pt 96 704)
+)
+(connector
+	(text "hartRGB[7..0]" (rect -14 704 49 721)(font "Intel Clear" ))
+	(pt -24 720)
+	(pt 96 720)
+	(bus)
+)
+(connector
+	(text "hart_select" (rect -350 752 -297 769)(font "Intel Clear" ))
+	(pt -288 768)
+	(pt -488 768)
+)
+(connector
+	(text "clk" (rect -336 688 -322 705)(font "Intel Clear" ))
+	(pt -488 704)
+	(pt -288 704)
+)
+(connector
+	(pt -80 536)
+	(pt 32 536)
+	(bus)
+)
+(connector
+	(text "BenetDR" (rect 474 584 516 601)(font "Intel Clear" ))
+	(pt 472 600)
+	(pt 544 600)
+)
+(connector
+	(text "BenetRGB[7..0]" (rect 474 600 547 617)(font "Intel Clear" ))
+	(pt 472 616)
+	(pt 544 616)
+	(bus)
+)
+(connector
+	(text "clk" (rect -304 936 -290 953)(font "Intel Clear" ))
+	(pt -392 952)
+	(pt -256 952)
+)
+(connector
+	(text "resetN" (rect -318 952 -288 969)(font "Intel Clear" ))
+	(pt -392 968)
+	(pt -256 968)
+)
+(connector
+	(text "pixelX[10..0]" (rect -318 968 -259 985)(font "Intel Clear" ))
+	(pt -392 984)
+	(pt -256 984)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect -318 984 -259 1001)(font "Intel Clear" ))
+	(pt -392 1000)
+	(pt -256 1000)
+	(bus)
+)
+(connector
+	(text "BenetDR" (rect -38 936 4 953)(font "Intel Clear" ))
+	(pt -40 952)
+	(pt 32 952)
+)
+(connector
+	(text "BenetRGB[7..0]" (rect -38 952 35 969)(font "Intel Clear" ))
+	(pt -40 968)
+	(pt 32 968)
+	(bus)
+)
 (junction (pt 368 280))
 (junction (pt 824 184))
 (junction (pt 824 200))
@@ -2306,12 +2425,12 @@ agreement for further details.
 (text "KEY0  is Reset - Active Low" (rect -264 176 -104 195)(font "Intel Clear" (font_size 8)))
 (text "Update the objects_mux" (rect 376 368 521 387)(font "Intel Clear" (font_size 8)))
 (text "Update the game_controller" (rect 360 680 526 699)(font "Intel Clear" (font_size 8)))
-(text "The background" (rect -544 624 -449 643)(font "Intel Clear" (font_size 8)))
+(text "The background" (rect -544 432 -449 451)(font "Intel Clear" (font_size 8)))
 (text "Add here the \"square_object\" and  \"random\" modules" (rect -528 1248 -212 1267)(font "Intel Clear" (font_size 8)))
 (text "Vaccine display bitmap" (rect 488 1248 627 1267)(font "Intel Clear" (font_size 8)))
 (rectangle (rect 344 984 1272 1200)(color 0 0 0)(line_width 3))
 (rectangle (rect 448 -16 984 352)(color 0 0 0)(line_width 3))
 (rectangle (rect -296 168 328 376)(color 0 0 0)(line_width 3))
-(rectangle (rect -552 592 248 1016)(color 0 0 0)(line_width 3))
+(rectangle (rect -552 400 248 1200)(color 0 0 0)(line_width 3))
 (rectangle (rect -552 1240 1000 1800)(color 0 0 0)(line_width 3))
 (rectangle (rect -552 1864 968 2448)(color 0 0 0)(line_width 3))
