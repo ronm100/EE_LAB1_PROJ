@@ -21,7 +21,6 @@ module	smileyface_moveCollision	(
 					output logic [5:0] circularState,
 					
 					
-					//output logic [3:0] circularState
 					output	 logic IsInCircular,
 					//DEBUG
 					output logic signed [10:0] DEBUG1,
@@ -124,7 +123,7 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	Yspeed <= Yspeed ; 
 	Xspeed <= Xspeed ; 
-	isInStartingLocation <= (topLeftX == (initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y));
+	isInStartingLocation <= (topLeftX == ((initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y))) || (topLeftX == ((initial_positionsX[circular_ps - 1] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps - 1] + INITIAL_Y))) ||  (topLeftX == ((initial_positionsX[circular_ps + 1] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps + 1] + INITIAL_Y)));
 		//DEBUG
 	DEBUG1 <= (initial_positionsX[circular_ps] + INITIAL_X);
 	DEBUG2 <= (initial_positionsY[circular_ps] + INITIAL_Y);
@@ -203,7 +202,7 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-				frame_counter <= (frame_counter +1) % 5;
+				frame_counter <= (frame_counter +1) % 4;
 				//frame_counter = 0;
 				if( frame_counter == 0 && movement_type == CIRCULAR) circular_ps <= circular_ns;
 				

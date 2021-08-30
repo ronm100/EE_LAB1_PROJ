@@ -30,18 +30,12 @@ module	Line	(
 
 // a module used to generate the  ball trajectory.  
 
-parameter int INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM    HAS TO BE THE SAME AS CLAMP'S
-parameter int INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM    HAS TO BE THE SAME AS CLAMP'S
+localparam logic signed [10:0] INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
+localparam logic signed [10:0] INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
 localparam int MAX_STATE = 50;
 localparam int ORTHAGONAL_STATE = 25;
 localparam logic signed [6:0] DELTA = 7'd32;
 localparam logic signed [6:0] DELTAN = -7'd32;
-logic signed [MAX_STATE:0] [10:0] initial_positionsX = {
-11'd32, 11'd31, 11'd31, 11'd30, 11'd30, 11'd29, 11'd28, 11'd27, 11'd26, 11'd25, 11'd24, 11'd23, 11'd21, 11'd20, 11'd18, 11'd17, 11'd15, 11'd14, 11'd12, 11'd11, 11'd9, 11'd7, 11'd5, 11'd4, 11'd2, 11'd0, -11'd2, -11'd4, -11'd5, -11'd7, -11'd9, -11'd10, -11'd12, -11'd14, -11'd15, -11'd17, -11'd18, -11'd20, -11'd21, -11'd23, -11'd24, -11'd25, -11'd26, -11'd27, -11'd28, -11'd29, -11'd29, -11'd30, -11'd31, -11'd31, -11'd32
-};
-logic signed [MAX_STATE:0] [10:0] initial_positionsY = {
-11'd6, 11'd7, 11'd9, 11'd11, 11'd12, 11'd14, 11'd16, 11'd17, 11'd19, 11'd20, 11'd21, 11'd23, 11'd24, 11'd25, 11'd26, 11'd27, 11'd28, 11'd29, 11'd30, 11'd30, 11'd31, 11'd31, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd32, 11'd31, 11'd31, 11'd30, 11'd30, 11'd29, 11'd28, 11'd27, 11'd26, 11'd25, 11'd24, 11'd23, 11'd21, 11'd20, 11'd19, 11'd17, 11'd16, 11'd14, 11'd12, 11'd11, 11'd9, 11'd7, 11'd6
-};
 logic signed [MAX_STATE:0] [40:0] slopes_32 = { //The Slope between initial position and current position, multiplied by 32
 41'd6, 41'd7, 41'd9, 41'd12, 41'd13, 41'd15, 41'd18, 41'd20, 41'd23, 41'd26, 41'd28, 41'd32, 41'd37, 41'd40, 41'd46, 41'd51, 41'd60, 41'd66, 41'd80, 41'd87, 41'd110, 41'd142, 41'd205, 41'd256, 41'd512, 41'd0, -41'd512, -41'd256, -41'd205, -41'd142, -41'd110, -41'd96, -41'd80, -41'd66, -41'd60, -41'd51, -41'd46, -41'd40, -41'd37, -41'd32, -41'd28, -41'd26, -41'd23, -41'd20, -41'd18, -41'd15, -41'd13, -41'd12, -41'd9, -41'd7, -41'd6
 };
@@ -61,7 +55,7 @@ begin
 // Here we check if the current pixel is close enough to making both sides of the line equation equal.
 	if(circular_ps == ORTHAGONAL_STATE) // Infinite slope
 	begin
-		if(pixelX == (INITIAL_X + initial_positionsX[ORTHAGONAL_STATE])) isOnLine = 1;
+		if(pixelX == (INITIAL_X)) isOnLine = 1;
 		else isOnLine = 0;
 	end
 	/*
