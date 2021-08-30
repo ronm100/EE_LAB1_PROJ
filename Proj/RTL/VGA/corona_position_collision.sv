@@ -41,7 +41,7 @@ begin
 		
 	end 
 	else begin
-		if ((IsInCircularMovement) && (EndOfPhase1)) begin
+		if ((IsInCircularMovement) && (EndOfPhase1) && (!draw_request)) begin
 			X_positions <= X_rand_positions;
 			Y_positions <= Y_rand_positions;
 			draw_request <= rand_draw_request;
