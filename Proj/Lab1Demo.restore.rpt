@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Mon Aug 30 15:46:52 2021
+Mon Aug 30 17:32:08 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Mon Aug 30 15:46:52 2021 ;
+; Restore Archived Project Status ; Successful - Mon Aug 30 17:32:08 2021 ;
 ; Revision Name                   ; Lab1Demo                              ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                      ;
 ; Family                          ; Cyclone V                             ;
@@ -47,24 +47,21 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/Ron/Desktop/Studies/Semester 6/EE_Lab1/EE_LAB1_PROJ/VGA_POST_16_08_21.qar' into the 'C:\\Users\\Ron\\Desktop\\Studies\\Semester 6\\EE_Lab1\\EE_LAB1_PROJ\\Proj/' directory
+Info: Successfully restored 'C:/Users/Ganit/Documents/Tomer/VGA_POST_16_08_21.qar' into the 'C:\\Users\\Ganit\\Documents\\Tomer\\Proj/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 82 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Mon Aug 30 15:46:53 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Shell was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Mon Aug 30 17:32:08 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
-+-------------------------+
-; Files Restored          ;
-+-------------------------+
-; File Name               ;
-+-------------------------+
-; output_files/Chain1.cdf ;
-; output_files/stp1.stp   ;
-+-------------------------+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
 +-------------------------------------------------------+
@@ -153,6 +150,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 82 warnings
 ; matrix_top_XY.qip                                     ;
 ; matrix_top_XY.v                                       ;
 ; matrix_top_XY_bb.v                                    ;
+; output_files/Chain1.cdf                               ;
+; output_files/stp1.stp                                 ;
 +-------------------------------------------------------+
 
 
