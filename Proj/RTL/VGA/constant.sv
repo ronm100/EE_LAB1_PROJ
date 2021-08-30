@@ -12,7 +12,7 @@ begin
 	const1 = 32;
 	const2 = 32;
 	
-	const3 = 100;
+	const3 = 50;
 	const4 = 32;
 
 end

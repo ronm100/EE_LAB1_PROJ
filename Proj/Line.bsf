@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 240 160)
+	(rect 16 16 264 160)
 	(text "Line" (rect 5 0 21 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -67,11 +67,32 @@ agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
-		(pt 224 32)
+		(pt 248 32)
 		(output)
 		(text "line_DR" (rect 0 0 33 12)(font "Arial" ))
-		(text "line_DR" (rect 170 27 203 39)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32)(line_width 1))
+		(text "line_DR" (rect 194 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 1))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "DEBUG2" (rect 0 0 38 12)(font "Arial" ))
+		(text "DEBUG2" (rect 189 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "DEBUG3" (rect 0 0 38 12)(font "Arial" ))
+		(text "DEBUG3" (rect 189 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 1))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "DEBUG[40..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "DEBUG[40..0]" (rect 167 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
 	)
 	(parameter
 		"INITIAL_X"
@@ -84,7 +105,7 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 208 128)(line_width 1))
+		(rectangle (rect 16 16 232 128)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 240 -64 340 16))
+	(annotation_block (parameter)(rect 264 -64 364 16))
 )
