@@ -115,6 +115,20 @@ agreement for further details.
 		(text "EndOfPhase1" (rect 260 91 315 103)(font "Arial" ))
 		(line (pt 336 96)(pt 320 96)(line_width 1))
 	)
+	(port
+		(pt 336 112)
+		(output)
+		(text "upCounter" (rect 0 0 41 12)(font "Arial" ))
+		(text "upCounter" (rect 274 107 315 119)(font "Arial" ))
+		(line (pt 336 112)(pt 320 112)(line_width 1))
+	)
+	(port
+		(pt 336 128)
+		(output)
+		(text "downCounter" (rect 0 0 51 12)(font "Arial" ))
+		(text "downCounter" (rect 264 123 315 135)(font "Arial" ))
+		(line (pt 336 128)(pt 320 128)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 320 160)(line_width 1))
 	)

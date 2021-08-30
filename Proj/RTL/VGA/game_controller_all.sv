@@ -19,7 +19,9 @@ module	game_controller_all	(
 			output logic collision, // active in case of collision between two objects
 			output logic SingleHitPulse, // critical code, generating A single pulse in a frame 
 			output logic [0:3] collision_clamp_corona,
-			output logic EndOfPhase1 //all of the first vaccines where captured 
+			output logic EndOfPhase1, //all of the first vaccines where captured 
+			output logic  upCounter,
+			output logic  downCounter
 );
 
 // drawing_request_Ball   -->  smiley
@@ -54,6 +56,12 @@ begin
 	else if ( drawing_request_Ball &&  drawing_request_corona[8] ) collision_clamp_corona = 8;
 	else if ( drawing_request_Ball &&  drawing_request_corona[9] ) collision_clamp_corona = 9;
 	else collision_clamp_corona = 15; //should not get here- error code
+	
+	//Scoreboard
+	if(collision_clamp_vaccine != 15) upCounter = 1;
+	else upCounter = 0;
+	if(collision_clamp_corona != 15) downCounter = 1;
+	else downCounter = 0;
 end
 
 //assign collision_clamp_vaccine = ( drawing_request_Ball &&  drawing_request_vaccine );
@@ -63,10 +71,14 @@ assign collision = (( drawing_request_Ball && drawing_request_1) || (collision_c
 // add colision between number and Smiley
 
 
-logic flag ; // a semaphore to set the output only once per frame / regardless of the number of collisions 
+logic flag, vac_col, cor_col ; // a semaphore to set the output only once per frame / regardless of the number of collisions 
 
 always_ff@(posedge clk or negedge resetN)
 begin
+
+	vac_col <= (collision_clamp_vaccine != 15);
+	cor_col <= (collision_clamp_corona != 15);
+
 	if(!resetN)
 	begin 
 		flag	<= 1'b0;
@@ -82,13 +94,35 @@ begin
 //		change the section below  to collision between number and smiley
 
 
-if ( collision  && (flag == 1'b0)) begin 
+	if ( collision  && (flag == 1'b0)) begin 
 			flag	<= 1'b1; // to enter only once 
 			if(collision_clamp_vaccine != 15) SingleHitPulse <= 1'b1 ;
 			if(collision_clamp_corona != 15) SingleHitPulse <= 1'b1 ;
 			//SingleHitPulse <= 1'b1 ; 
 		end ; 
 	end 
+	/*
+	// Score display logic
+	if(cor_col)
+	begin
+		if(scoreDig1 == 0)
+		begin
+			scoreDig1 <= 9;
+			scoreDig2 <= scoreDig2 - 1;
+		end
+		else scoreDig1 <= scoreDig1 + 1;
+	end
+
+	else if(vac_col)
+	begin
+		if(scoreDig1 == 9)
+		begin
+			scoreDig1 <= 0;
+			scoreDig2 <= scoreDig2 + 1;
+		end
+		else scoreDig1 <= scoreDig1 + 1;
+	end
+	*/
 end
 
 endmodule

@@ -31,6 +31,13 @@ module	objects_mux_new	(
 					
 					// line
 					input		logic	lineDR,
+					
+			// Scoreboard
+					input		logic	dig1DR,
+					input		logic	dig2DR,
+					input		logic	[7:0] dig1RGB,
+					input		logic	[7:0] dig2RGB,
+					
 			  
 				   output	logic	[7:0] RGBOut
 );
@@ -70,6 +77,8 @@ begin
 		else if (vaccineDrawingRequest[8] == 1'b1 )  RGBOut <= vaccineRGB[8];  //second priority 
 		else if (vaccineDrawingRequest[9] == 1'b1 )  RGBOut <= vaccineRGB[9];  //second priority 
 		else if(lineDR) RGBOut <= 8'h080808;
+		else if(dig1DR) RGBOut <= dig1RGB;
+		else if(dig2DR) RGBOut <= dig2RGB;
 		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 
 		end ; 

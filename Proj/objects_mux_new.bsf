@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 288 256)
+	(rect 16 16 288 320)
 	(text "objects_mux_new" (rect 5 0 76 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -109,6 +109,34 @@ agreement for further details.
 		(line (pt 0 208)(pt 16 208)(line_width 1))
 	)
 	(port
+		(pt 0 224)
+		(input)
+		(text "dig1DR" (rect 0 0 29 12)(font "Arial" ))
+		(text "dig1DR" (rect 21 219 50 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "dig2DR" (rect 0 0 30 12)(font "Arial" ))
+		(text "dig2DR" (rect 21 235 51 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "dig1RGB[7..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "dig1RGB[7..0]" (rect 21 251 76 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "dig2RGB[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "dig2RGB[7..0]" (rect 21 267 77 279)(font "Arial" ))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
 		(pt 272 32)
 		(output)
 		(text "RGBOut[7..0]" (rect 0 0 55 12)(font "Arial" ))
@@ -116,6 +144,6 @@ agreement for further details.
 		(line (pt 272 32)(pt 256 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 256 224)(line_width 1))
+		(rectangle (rect 16 16 256 288)(line_width 1))
 	)
 )
