@@ -43,8 +43,12 @@ begin
 			flag <= 0;
 			if(dig1 == 0)
 			begin
-				dig1 <= 9;
-				dig2 <= dig2 - 1;
+				if(dig2 == 0) ;
+				else
+				begin
+					dig1 <= 9;
+					dig2 <= dig2 - 1;
+				end
 			end
 			else dig1 <= dig1 - 1;
 		end

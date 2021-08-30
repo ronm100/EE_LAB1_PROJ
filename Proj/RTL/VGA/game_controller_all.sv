@@ -71,13 +71,11 @@ assign collision = (( drawing_request_Ball && drawing_request_1) || (collision_c
 // add colision between number and Smiley
 
 
-logic flag, vac_col, cor_col ; // a semaphore to set the output only once per frame / regardless of the number of collisions 
+logic flag; // a semaphore to set the output only once per frame / regardless of the number of collisions 
 
 always_ff@(posedge clk or negedge resetN)
 begin
 
-	vac_col <= (collision_clamp_vaccine != 15);
-	cor_col <= (collision_clamp_corona != 15);
 
 	if(!resetN)
 	begin 
@@ -96,33 +94,9 @@ begin
 
 	if ( collision  && (flag == 1'b0)) begin 
 			flag	<= 1'b1; // to enter only once 
-			if(collision_clamp_vaccine != 15) SingleHitPulse <= 1'b1 ;
-			if(collision_clamp_corona != 15) SingleHitPulse <= 1'b1 ;
-			//SingleHitPulse <= 1'b1 ; 
+			SingleHitPulse <= 1'b1 ; 
 		end ; 
 	end 
-	/*
-	// Score display logic
-	if(cor_col)
-	begin
-		if(scoreDig1 == 0)
-		begin
-			scoreDig1 <= 9;
-			scoreDig2 <= scoreDig2 - 1;
-		end
-		else scoreDig1 <= scoreDig1 + 1;
-	end
-
-	else if(vac_col)
-	begin
-		if(scoreDig1 == 9)
-		begin
-			scoreDig1 <= 0;
-			scoreDig2 <= scoreDig2 + 1;
-		end
-		else scoreDig1 <= scoreDig1 + 1;
-	end
-	*/
 end
 
 endmodule

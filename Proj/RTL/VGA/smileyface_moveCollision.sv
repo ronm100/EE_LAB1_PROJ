@@ -111,7 +111,7 @@ begin
 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;  
    circularState[5:0] = circular_ps[5:0];
-   IsInCircular =  isInStartingLocation;
+   IsInCircular =  !movement_type;
 	
 end
 
