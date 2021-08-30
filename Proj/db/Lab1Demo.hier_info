@@ -20,6 +20,7 @@ resetN => HART_DISPLAY:inst5.resetN
 resetN => Line:inst13.resetN
 resetN => Benet_Block:inst14.resetN
 resetN => AUDIO:inst18.resetN
+resetN => sound_controller:inst15.resetN
 PS2_CLK => KEYBOARD_INTERFACE:inst19.PS2_CLK
 PS2_DAT => KEYBOARD_INTERFACE:inst19.PS2_DAT
 BG_RGB[0] <= back_ground_draw:inst4.BG_RGB[0]
@@ -40617,6 +40618,56 @@ preScaleValue[6] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 preScaleValue[7] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 preScaleValue[8] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 preScaleValue[9] <= <GND>
+
+
+|TOP_VGA_DEMO_KBD|sound_controller:inst15
+clk => play_happy_sound.CLK
+clk => play_sad_sound.CLK
+clk => freq[0]~reg0.CLK
+clk => freq[1]~reg0.CLK
+clk => freq[2]~reg0.CLK
+clk => freq[3]~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => sound_ns[1].CLK
+clk => sound_ns[0].CLK
+clk => sound_ps[1].CLK
+clk => sound_ps[0].CLK
+resetN => play_happy_sound.ACLR
+resetN => play_sad_sound.ACLR
+resetN => freq[0]~reg0.ACLR
+resetN => freq[1]~reg0.ACLR
+resetN => freq[2]~reg0.ACLR
+resetN => freq[3]~reg0.ACLR
+resetN => counter[0].ACLR
+resetN => counter[1].ACLR
+resetN => counter[2].ACLR
+resetN => counter[3].ACLR
+resetN => counter[4].ACLR
+resetN => counter[5].ACLR
+resetN => counter[6].ACLR
+resetN => sound_ns[1].ACLR
+resetN => sound_ns[0].ACLR
+resetN => sound_ps[1].ACLR
+resetN => sound_ps[0].ACLR
+collision_clamp_corona[3] => Equal1.IN3
+collision_clamp_corona[2] => Equal1.IN2
+collision_clamp_corona[1] => Equal1.IN1
+collision_clamp_corona[0] => Equal1.IN0
+collision_clamp_vaccine[3] => Equal0.IN3
+collision_clamp_vaccine[2] => Equal0.IN2
+collision_clamp_vaccine[1] => Equal0.IN1
+collision_clamp_vaccine[0] => Equal0.IN0
+startOfFrame => always0.IN1
+freq[0] <= freq[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq[1] <= freq[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq[2] <= freq[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq[3] <= freq[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TOP_VGA_DEMO_KBD|SEG7:inst10
