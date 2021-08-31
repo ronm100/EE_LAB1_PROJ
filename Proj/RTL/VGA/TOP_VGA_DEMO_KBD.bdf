@@ -1777,7 +1777,7 @@ agreement for further details.
 		(pt 272 32)
 		(output)
 		(text "RGBOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "RGBOut[7..0]" (rect 195 27 251 39)(font "Arial" ))
+		(text "RGBOut[7..0]" (rect 195 27 262 39)(font "Arial" ))
 		(line (pt 272 32)(pt 256 32)(line_width 3))
 	)
 	(drawing
@@ -1832,6 +1832,63 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 144 112))
+	)
+)
+(symbol
+	(rect 368 1056 640 1200)
+	(text "sound_control" (rect 5 0 73 12)(font "Arial" ))
+	(text "inst10" (rect 8 128 36 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "collision_clamp_corona[0..3]" (rect 0 0 139 12)(font "Arial" ))
+		(text "collision_clamp_corona[0..3]" (rect 21 59 160 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "collision_clamp_vaccine[0..3]" (rect 0 0 145 12)(font "Arial" ))
+		(text "collision_clamp_vaccine[0..3]" (rect 21 75 166 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 91 88 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 272 32)
+		(output)
+		(text "enable_sound" (rect 0 0 67 12)(font "Arial" ))
+		(text "enable_sound" (rect 195 27 262 39)(font "Arial" ))
+		(line (pt 272 32)(pt 256 32))
+	)
+	(port
+		(pt 272 48)
+		(output)
+		(text "freq[3..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "freq[3..0]" (rect 213 43 259 55)(font "Arial" ))
+		(line (pt 272 48)(pt 256 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 256 128))
 	)
 )
 (connector
@@ -2687,11 +2744,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "collision" (rect 818 1072 856 1089)(font "Intel Clear" ))
-	(pt 808 1088)
-	(pt 864 1088)
-)
-(connector
 	(text "dig1DR" (rect 1482 1952 1516 1969)(font "Intel Clear" ))
 	(pt 1472 1968)
 	(pt 1528 1968)
@@ -2787,6 +2839,42 @@ agreement for further details.
 	(text "timeout" (rect 1128 1352 1164 1369)(font "Intel Clear" ))
 	(pt 1088 1368)
 	(pt 1200 1368)
+)
+(connector
+	(pt 640 1088)
+	(pt 864 1088)
+)
+(connector
+	(pt 640 1104)
+	(pt 864 1104)
+	(bus)
+)
+(connector
+	(text "clk" (rect 312 1072 326 1089)(font "Intel Clear" ))
+	(pt 304 1088)
+	(pt 368 1088)
+)
+(connector
+	(text "resetN" (rect 312 1088 342 1105)(font "Intel Clear" ))
+	(pt 304 1104)
+	(pt 368 1104)
+)
+(connector
+	(text "collision_clamp_corona[0..3]" (rect 312 1104 447 1121)(font "Intel Clear" ))
+	(pt 312 1120)
+	(pt 368 1120)
+	(bus)
+)
+(connector
+	(text "collision_clamp_vaccine[0..3]" (rect 312 1120 451 1137)(font "Intel Clear" ))
+	(pt 312 1136)
+	(pt 368 1136)
+	(bus)
+)
+(connector
+	(text "startOfFrame" (rect 306 1136 369 1153)(font "Intel Clear" ))
+	(pt 368 1152)
+	(pt 296 1152)
 )
 (junction (pt 368 280))
 (junction (pt 824 184))
