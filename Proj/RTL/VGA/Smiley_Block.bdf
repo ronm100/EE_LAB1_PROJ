@@ -277,127 +277,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 584 440 808 584)
-	(text "smileyface_moveCollision" (rect 5 0 135 12)(font "Arial" ))
-	(text "inst" (rect 8 128 25 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
-		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
-		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "launch_Cable" (rect 0 0 66 12)(font "Arial" ))
-		(text "launch_Cable" (rect 21 75 87 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "collision" (rect 0 0 38 12)(font "Arial" ))
-		(text "collision" (rect 21 91 59 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "topLeftX[10..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "topLeftX[10..0]" (rect 142 27 215 39)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32)(line_width 3))
-	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "topLeftY[10..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "topLeftY[10..0]" (rect 140 43 215 55)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48)(line_width 3))
-	)
-	(port
-		(pt 224 64)
-		(output)
-		(text "circularState[5..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "circularState[5..0]" (rect 130 59 217 71)(font "Arial" ))
-		(line (pt 224 64)(pt 208 64)(line_width 3))
-	)
-	(port
-		(pt 224 80)
-		(output)
-		(text "IsInCircular" (rect 0 0 56 12)(font "Arial" ))
-		(text "IsInCircular" (rect 156 75 212 87)(font "Arial" ))
-		(line (pt 224 80)(pt 208 80))
-	)
-	(port
-		(pt 224 96)
-		(output)
-		(text "DEBUG1[10..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "DEBUG1[10..0]" (rect 139 91 215 103)(font "Arial" ))
-		(line (pt 224 96)(pt 208 96)(line_width 3))
-	)
-	(port
-		(pt 224 112)
-		(output)
-		(text "DEBUG2[10..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "DEBUG2[10..0]" (rect 139 107 215 119)(font "Arial" ))
-		(line (pt 224 112)(pt 208 112)(line_width 3))
-	)
-	(parameter
-		"INITIAL_X"
-		"initial_x"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"INITIAL_Y"
-		"initial_y"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"INITIAL_X_SPEED"
-		"initial_x_speed"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"INITIAL_Y_SPEED"
-		"initial_y_speed"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_Y_SPEED"
-		"220"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"X_SPEED"
-		"40"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"Y_SPEED"
-		"40"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 208 128))
-	)
-	(annotation_block (parameter)(rect 584 272 841 424))
-)
-(symbol
 	(rect 1304 344 1544 488)
 	(text "handBitMap" (rect 5 0 61 12)(font "Arial" ))
 	(text "inst3" (rect 8 128 30 145)(font "Intel Clear" ))
@@ -555,6 +434,113 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect 952 520 1180 596))
 )
+(symbol
+	(rect 584 440 808 584)
+	(text "smileyface_moveCollision" (rect 5 0 135 12)(font "Arial" ))
+	(text "inst" (rect 8 128 25 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "launch_Cable" (rect 0 0 66 12)(font "Arial" ))
+		(text "launch_Cable" (rect 21 75 87 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "collision" (rect 0 0 38 12)(font "Arial" ))
+		(text "collision" (rect 21 91 59 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "topLeftX[10..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "topLeftX[10..0]" (rect 142 27 203 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "topLeftY[10..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "topLeftY[10..0]" (rect 140 43 203 55)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "circularState[5..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "circularState[5..0]" (rect 130 59 203 71)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "IsInCircular" (rect 0 0 56 12)(font "Arial" ))
+		(text "IsInCircular" (rect 156 75 203 87)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80))
+	)
+	(parameter
+		"INITIAL_X"
+		"initial_x"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"INITIAL_Y"
+		"initial_y"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"INITIAL_X_SPEED"
+		"initial_x_speed"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"INITIAL_Y_SPEED"
+		"initial_y_speed"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_Y_SPEED"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"X_SPEED"
+		"40"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"Y_SPEED"
+		"40"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+	(annotation_block (parameter)(rect 584 272 841 424))
+)
 (connector
 	(text "clk" (rect 880 392 894 409)(font "Intel Clear" ))
 	(pt 856 408)
@@ -662,28 +648,6 @@ agreement for further details.
 	(pt 1688 472)
 )
 (connector
-	(pt 792 472)
-	(pt 808 472)
-	(bus)
-)
-(connector
-	(text "SmileyTLX[10..0]" (rect 844 456 925 473)(font "Intel Clear" ))
-	(pt 808 472)
-	(pt 936 472)
-	(bus)
-)
-(connector
-	(pt 792 488)
-	(pt 808 488)
-	(bus)
-)
-(connector
-	(text "SmileyTLY[10..0]" (rect 842 472 923 489)(font "Intel Clear" ))
-	(pt 808 488)
-	(pt 936 488)
-	(bus)
-)
-(connector
 	(text "circular_movement" (rect 808 504 900 521)(font "Intel Clear" ))
 	(pt 856 520)
 	(pt 808 520)
@@ -714,6 +678,28 @@ agreement for further details.
 	(text "circularState[5..0]" (rect 818 488 900 505)(font "Intel Clear" ))
 	(pt 896 504)
 	(pt 808 504)
+	(bus)
+)
+(connector
+	(pt 792 472)
+	(pt 808 472)
+	(bus)
+)
+(connector
+	(text "SmileyTLX[10..0]" (rect 844 456 925 473)(font "Intel Clear" ))
+	(pt 808 472)
+	(pt 936 472)
+	(bus)
+)
+(connector
+	(pt 792 488)
+	(pt 808 488)
+	(bus)
+)
+(connector
+	(text "SmileyTLY[10..0]" (rect 842 472 923 489)(font "Intel Clear" ))
+	(pt 808 488)
+	(pt 936 488)
 	(bus)
 )
 (junction (pt 808 472))

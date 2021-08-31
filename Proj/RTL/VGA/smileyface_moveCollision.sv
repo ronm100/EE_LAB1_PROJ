@@ -193,6 +193,7 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
+			collisionFlag <= 0;
 				frame_counter <= (frame_counter +1) % 4;
 				//frame_counter = 0;
 				if( frame_counter == 0 && movement_type == CIRCULAR) circular_ps <= circular_ns;
