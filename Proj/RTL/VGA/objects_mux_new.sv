@@ -83,14 +83,20 @@ begin
 		else if (vaccineDrawingRequest[8] == 1'b1 )  RGBOut <= vaccineRGB[8];  //second priority 
 		else if (vaccineDrawingRequest[9] == 1'b1 )  RGBOut <= vaccineRGB[9];  //second priority 
 		else if (BenetDR) RGBOut <= BenetRGB;
-		else if(lineDR) RGBOut <= 8'h080808;
+		else if(lineDR) RGBOut <=8'hfb;
 		else if(dig1DR) RGBOut <= dig1RGB;
 		else if(dig2DR) RGBOut <= dig2RGB;
 		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 
 		
 		//Timeout
-		if(timeout) RGBOut <= backGroundRGB;
+		if(timeout)
+		begin
+			if(dig1DR) RGBOut <= dig1RGB;
+			else if(dig2DR) RGBOut <= dig2RGB;
+			else RGBOut <= backGroundRGB ;
+		end
+		
 		end ; 
 	end
 
