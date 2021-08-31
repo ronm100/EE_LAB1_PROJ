@@ -41,6 +41,9 @@ module	objects_mux_new	(
 					// benet
 					input		logic BenetDR,
 					input		logic [7:0] BenetRGB,
+					
+			//Timeout
+					input logic timeout,
 			  
 				   output	logic	[7:0] RGBOut
 );
@@ -85,6 +88,9 @@ begin
 		else if(dig2DR) RGBOut <= dig2RGB;
 		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 
+		
+		//Timeout
+		if(timeout) RGBOut <= backGroundRGB;
 		end ; 
 	end
 

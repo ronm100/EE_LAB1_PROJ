@@ -21,10 +21,7 @@ module	smileyface_moveCollision	(
 					output logic [5:0] circularState,
 					
 					
-					output	 logic IsInCircular,
-					//DEBUG
-					output logic signed [10:0] DEBUG1,
-					output logic signed [10:0] DEBUG2
+					output	 logic IsInCircular
 );
 
 
@@ -116,17 +113,11 @@ begin
 end
 
 
-
-
-
 always_ff@(posedge clk or negedge resetN)
 begin
 	Yspeed <= Yspeed ; 
 	Xspeed <= Xspeed ; 
 	isInStartingLocation <= (topLeftX == ((initial_positionsX[circular_ps] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps] + INITIAL_Y))) || (topLeftX == ((initial_positionsX[circular_ps - 1] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps - 1] + INITIAL_Y))) ||  (topLeftX == ((initial_positionsX[circular_ps + 1] + INITIAL_X)) && (topLeftY == (initial_positionsY[circular_ps + 1] + INITIAL_Y)));
-		//DEBUG
-	DEBUG1 <= (initial_positionsX[circular_ps] + INITIAL_X);
-	DEBUG2 <= (initial_positionsY[circular_ps] + INITIAL_Y);
 	
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
