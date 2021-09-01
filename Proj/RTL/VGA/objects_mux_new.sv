@@ -12,8 +12,8 @@ module	objects_mux_new	(
 					input		logic	clk,
 					input		logic	resetN,
 		   // smiley 
-					input		logic	smileyDrawingRequest, // two set of inputs per unit
-					input		logic	[7:0] smileyRGB, 
+					input		logic	clampDrawingRequest, // two set of inputs per unit
+					input		logic	[7:0] clampRGB, 
 			  
 		  // add the box here 
 					input		logic [0:9]	vaccineDrawingRequest, // two set of inputs per unit
@@ -21,8 +21,7 @@ module	objects_mux_new	(
 			  
 		  ////////////////////////
 		  // background 
-					input    logic HartDrawingRequest, // box of numbers
-					input		logic	[7:0] hartRGB,    
+    
 					
 
 					input		logic	[7:0] backGroundRGB,
@@ -55,8 +54,8 @@ begin
 	end
 	
 	else begin
-		if (smileyDrawingRequest == 1'b1 )   
-			RGBOut <= smileyRGB;  //first priority 
+		if (clampDrawingRequest == 1'b1 )   
+			RGBOut <= clampRGB;  //first priority 
 		 
 		 
 		 // add logic for box here
@@ -86,7 +85,6 @@ begin
 		else if(lineDR) RGBOut <=8'hfb;
 		else if(dig1DR) RGBOut <= dig1RGB;
 		else if(dig2DR) RGBOut <= dig2RGB;
-		else if (HartDrawingRequest == 1'b1) RGBOut <= hartRGB;
 		else RGBOut <= backGroundRGB ; // last priority 
 		
 		//Timeout

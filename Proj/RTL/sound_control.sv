@@ -6,8 +6,8 @@ module sound_control (
 	input logic [0:3] collision_clamp_vaccine,
 	input logic startOfFrame,
 	
-	output logic enable_sound,
-	output logic [3:0] freq
+	output logic enable_sound, //indicates the M.S.S when to play the notes
+	output logic [3:0] freq		// the frequncy of the desired note
 );
 
 logic [6:0] counter;
@@ -22,6 +22,7 @@ localparam int THIRD_NOTE = 3;
 logic [0:1] sound_ps = SILENT;
 logic [0:1] sound_ns = SILENT;
 
+// notes frequncies
 localparam int SOL = 7;
 localparam int RE = 2;
 localparam int DOD = 1;
@@ -42,10 +43,10 @@ always_ff@(posedge clk, negedge resetN) begin
 		sound_ns <= SECOND_NOTE;
 	end
 	else begin
-			if (collision_clamp_vaccine != 15) begin
+			if (collision_clamp_vaccine != 15) begin // second priority
 				play_happy_sound <= 1;
 			end
-			if (collision_clamp_corona != 15) begin
+			if (collision_clamp_corona != 15) begin	// first priority
 				if (play_happy_sound) play_happy_sound <= 0;
 				play_sad_sound <= 1;
 			end
@@ -54,7 +55,7 @@ always_ff@(posedge clk, negedge resetN) begin
 				if (sound_ps == THIRD_NOTE) sound_ns <= FIRST_NOTE;
 				else sound_ns <= sound_ps + 1;
 		
-				if (counter == 30) begin
+				if (counter == 30) begin // each note should be played for 30 frames
 					counter <= 0;
 					sound_ps <= sound_ns;
 					if (sound_ps == THIRD_NOTE) begin

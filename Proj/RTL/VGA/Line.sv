@@ -17,12 +17,7 @@ module	Line	(
 					input logic [5:0] circular_ps,
 					
 					
-					output logic line_DR, // a request to draw a line on current pixelput l
-					
-					//DEBUG
-					output logic DEBUG2,
-					output logic DEBUG3,
-					output logic signed [40:0] DEBUG
+					output logic line_DR // a request to draw a line on current pixelput l
 
 					
 );
@@ -30,8 +25,8 @@ module	Line	(
 
 // a module used to generate the  ball trajectory.  
 
-localparam logic signed [10:0] INITIAL_X = 288; // TODO: MAKE THIS LOCAL PARAM
-localparam logic signed [10:0] INITIAL_Y = 64; // TODO: MAKE THIS LOCAL PARAM
+localparam logic signed [10:0] INITIAL_X = 288;
+localparam logic signed [10:0] INITIAL_Y = 64; 
 localparam int MAX_STATE = 50;
 localparam int ORTHAGONAL_STATE = 25;
 localparam logic signed [40:0] DELTA = 32;
@@ -40,7 +35,7 @@ logic signed [MAX_STATE:0] [40:0] slopes_32 = { //The Slope between initial posi
 41'd6, 41'd7, 41'd9, 41'd12, 41'd13, 41'd15, 41'd18, 41'd20, 41'd23, 41'd26, 41'd28, 41'd32, 41'd37, 41'd40, 41'd46, 41'd51, 41'd60, 41'd66, 41'd80, 41'd87, 41'd110, 41'd142, 41'd205, 41'd256, 41'd512, 41'd0, -41'd512, -41'd256, -41'd205, -41'd142, -41'd110, -41'd96, -41'd80, -41'd66, -41'd60, -41'd51, -41'd46, -41'd40, -41'd37, -41'd32, -41'd28, -41'd26, -41'd23, -41'd20, -41'd18, -41'd15, -41'd13, -41'd12, -41'd9, -41'd7, -41'd6
 };
 
-logic isAboveClamp, isBelowCenter, isOnLine, conditionMax, conditionMin;
+logic isAboveClamp, isBelowCenter, isOnLine;
 
 logic signed [40:0] bigX, bigY, lineExpressionAbsVal, lineExpression;  
 
@@ -76,12 +71,6 @@ begin
 	//Here we check if current pixel is below the center of the circle of circular movement
 	if(pixelY > INITIAL_Y) isBelowCenter = 1;
 	else isBelowCenter = 0;
-	
-	//DEBUG
-	DEBUG = (bigY - ((bigX * slopes_32[circular_ps])));
-	DEBUG2 = ((bigY - (bigX * slopes_32[circular_ps])) < DELTA);
-	//DEBUG3 = ((bigY - (bigX * slopes_32[circular_ps])) > DELTAN);
-	DEBUG3 = 0;
 end
 
 always_ff@(posedge clk or negedge resetN)

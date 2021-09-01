@@ -87,22 +87,6 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1224 136 1400 152)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "keyIsPressed" (rect 90 0 158 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
 	(rect 592 440 768 456)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "keyPad[3..0]" (rect 90 0 153 12)(font "Arial" ))
@@ -280,76 +264,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 904 80 1144 224)
-	(text "keyToggle_decoder" (rect 5 0 100 12)(font "Arial" ))
-	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
-		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "keyCode[8..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "keyCode[8..0]" (rect 21 59 91 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "make" (rect 0 0 27 12)(font "Arial" ))
-		(text "make" (rect 21 75 48 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "brakee" (rect 0 0 33 12)(font "Arial" ))
-		(text "brakee" (rect 21 91 54 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 240 32)
-		(output)
-		(text "keyLatch" (rect 0 0 46 12)(font "Arial" ))
-		(text "keyLatch" (rect 181 27 219 39)(font "Arial" ))
-		(line (pt 240 32)(pt 224 32))
-	)
-	(port
-		(pt 240 48)
-		(output)
-		(text "keyRisingEdgePulse" (rect 0 0 101 12)(font "Arial" ))
-		(text "keyRisingEdgePulse" (rect 134 43 219 55)(font "Arial" ))
-		(line (pt 240 48)(pt 224 48))
-	)
-	(port
-		(pt 240 64)
-		(output)
-		(text "keyIsPressed" (rect 0 0 68 12)(font "Arial" ))
-		(text "keyIsPressed" (rect 162 59 219 71)(font "Arial" ))
-		(line (pt 240 64)(pt 224 64))
-	)
-	(parameter
-		"KEY_VALUE"
-		"001100110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 224 128))
-	)
-	(annotation_block (parameter)(rect 1144 24 1366 62))
-)
-(symbol
 	(rect 920 296 1160 440)
 	(text "keyToggle_decoder" (rect 5 0 100 12)(font "Arial" ))
 	(text "inst3" (rect 8 128 31 140)(font "Arial" ))
@@ -392,21 +306,21 @@ agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "keyLatch" (rect 0 0 46 12)(font "Arial" ))
-		(text "keyLatch" (rect 181 27 219 39)(font "Arial" ))
+		(text "keyLatch" (rect 181 27 227 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32))
 	)
 	(port
 		(pt 240 48)
 		(output)
 		(text "keyRisingEdgePulse" (rect 0 0 101 12)(font "Arial" ))
-		(text "keyRisingEdgePulse" (rect 134 43 219 55)(font "Arial" ))
+		(text "keyRisingEdgePulse" (rect 134 43 235 55)(font "Arial" ))
 		(line (pt 240 48)(pt 224 48))
 	)
 	(port
 		(pt 240 64)
 		(output)
 		(text "keyIsPressed" (rect 0 0 68 12)(font "Arial" ))
-		(text "keyIsPressed" (rect 162 59 219 71)(font "Arial" ))
+		(text "keyIsPressed" (rect 162 59 230 71)(font "Arial" ))
 		(line (pt 240 64)(pt 224 64))
 	)
 	(parameter
@@ -483,36 +397,6 @@ agreement for further details.
 	(pt 592 464)
 )
 (connector
-	(text "clk" (rect 879 96 893 113)(font "Intel Clear" ))
-	(pt 856 112)
-	(pt 904 112)
-)
-(connector
-	(text "resetN" (rect 866 112 896 129)(font "Intel Clear" ))
-	(pt 856 128)
-	(pt 904 128)
-)
-(connector
-	(text "keyCode[8..0]" (rect 808 128 874 145)(font "Intel Clear" ))
-	(pt 792 144)
-	(pt 904 144)
-	(bus)
-)
-(connector
-	(text "make" (rect 842 144 869 161)(font "Intel Clear" ))
-	(pt 792 160)
-	(pt 904 160)
-)
-(connector
-	(text "brake" (rect 835 160 862 177)(font "Intel Clear" ))
-	(pt 792 176)
-	(pt 904 176)
-)
-(connector
-	(pt 1144 144)
-	(pt 1224 144)
-)
-(connector
 	(pt 1160 344)
 	(pt 1224 344)
 )
@@ -556,6 +440,5 @@ agreement for further details.
 	(pt 1440 328)
 )
 (text "KEY_ENTER = 9'h15A" (rect 928 256 1056 275)(font "Intel Clear" (font_size 8)))
-(text "KEY_BS = 9'h066" (rect 912 -16 1017 3)(font "Intel Clear" (font_size 8)))
 (text "\r//Updated By Eyal Lev Feb 2021" (rect 112 43 312 62)(font "Intel Clear" (font_size 8)))
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021\r\n// Written By Alex Grinshpun David Bar-On  Feb  2019  \r" (rect 112 -8 471 30)(font "Intel Clear" (font_size 8)))

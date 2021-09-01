@@ -1,5 +1,5 @@
 Flow report for Lab1Demo
-Tue Aug 31 20:46:30 2021
+Wed Sep 01 03:17:12 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,19 +41,19 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Aug 31 20:45:44 2021       ;
+; Flow Status                     ; Successful - Wed Sep 01 03:16:22 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 6,887 / 41,910 ( 16 % )                     ;
-; Total registers                 ; 3523                                        ;
+; Logic utilization (in ALMs)     ; 6,512 / 41,910 ( 16 % )                     ;
+; Total registers                 ; 3447                                        ;
 ; Total pins                      ; 72 / 499 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 884,864 / 5,662,720 ( 16 % )                ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
+; Total DSP Blocks                ; 3 / 112 ( 3 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/31/2021 20:38:43 ;
+; Start date & time ; 09/01/2021 03:08:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab1Demo            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------+---------------+------------------+------------------+
 ; Assignment Name                     ; Value                                                                      ; Default Value ; Entity Name      ; Section Id       ;
 +-------------------------------------+----------------------------------------------------------------------------+---------------+------------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 1096301639158.163043152316456                                              ; --            ; --               ; --               ;
+; COMPILER_SIGNATURE_ID               ; 93383145738141.163045491811396                                             ; --            ; --               ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                         ; --            ; --               ; --               ;
 ; MISC_FILE                           ; RTL/VGA/valX.bsf                                                           ; --            ; --               ; --               ;
 ; MISC_FILE                           ; RTL/VGA/valX_inst.v                                                        ; --            ; --               ; --               ;
@@ -148,11 +148,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:55     ; 1.0                     ; 5034 MB             ; 00:02:31                           ;
-; Fitter                    ; 00:04:38     ; 1.1                     ; 6447 MB             ; 00:08:39                           ;
-; Assembler                 ; 00:00:18     ; 1.0                     ; 4936 MB             ; 00:00:17                           ;
-; TimeQuest Timing Analyzer ; 00:00:45     ; 1.5                     ; 5333 MB             ; 00:01:06                           ;
-; Total                     ; 00:07:36     ; --                      ; --                  ; 00:12:33                           ;
+; Analysis & Synthesis      ; 00:01:50     ; 1.0                     ; 5033 MB             ; 00:02:24                           ;
+; Fitter                    ; 00:05:20     ; 1.1                     ; 6444 MB             ; 00:09:51                           ;
+; Assembler                 ; 00:00:21     ; 1.0                     ; 4932 MB             ; 00:00:19                           ;
+; TimeQuest Timing Analyzer ; 00:00:47     ; 1.6                     ; 5330 MB             ; 00:01:10                           ;
+; Total                     ; 00:08:18     ; --                      ; --                  ; 00:13:44                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
