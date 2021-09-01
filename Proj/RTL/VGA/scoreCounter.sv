@@ -1,9 +1,9 @@
 
 
-module	scoreCounter	(	
+module	scoreCounter	(	// A simple counter that reacts to up and down signals
 			input	logic	resetN,
-			input	logic	up, 
-			input	logic	down,
+			input	logic	up, // goes up when a there is a collision between the clamp and a vaccine
+			input	logic	down, // goes up when a there is a collision between the clamp and a corona
 			input	logic	clk,
  
 			

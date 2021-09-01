@@ -1,6 +1,6 @@
 
 
-module	timeCounter	(	
+module	timeCounter	(	// a 3 minutes timer
 			input	logic	clk,
 			input	logic	resetN,
 			input	logic	oneSec,
