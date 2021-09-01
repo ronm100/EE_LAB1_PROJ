@@ -28,7 +28,7 @@ module	Line	(
 localparam logic signed [10:0] INITIAL_X = 288;
 localparam logic signed [10:0] INITIAL_Y = 64; 
 localparam int MAX_STATE = 50;
-localparam int ORTHAGONAL_STATE = 25;
+localparam int ORTHAGONAL_STATE = 25; //The state that represents 90 deg angle
 localparam logic signed [40:0] DELTA = 32;
 
 logic signed [MAX_STATE:0] [40:0] slopes_32 = { //The Slope between initial position and current position, multiplied by 32
@@ -41,13 +41,13 @@ logic signed [40:0] bigX, bigY, lineExpressionAbsVal, lineExpression;
 
 always_comb
 begin
-	bigX = pixelX - INITIAL_X;
-	bigY = (pixelY-INITIAL_Y) * 32;
+	bigX = pixelX - INITIAL_X; 
+	bigY = (pixelY-INITIAL_Y) * 32; // We multiply the equation by 32 to get accurate results
 	lineExpression = (bigY - ((bigX * slopes_32[circular_ps])));
-	lineExpressionAbsVal  = lineExpression[40] ? -lineExpression : lineExpression;
+	lineExpressionAbsVal  = lineExpression[40] ? -lineExpression : lineExpression; // abs(lineExpression)
 // Here we check if the current pixel is close enough to making both sides of the line equation equal.
 	if((circular_ps > 13) && (circular_ps < 37) && (circular_ps != ORTHAGONAL_STATE))
-	begin
+	begin // The line should be thicker for high slopes
 		if(lineExpressionAbsVal < (2 * DELTA)) isOnLine = 1;
 		else isOnLine = 0;
 	end
